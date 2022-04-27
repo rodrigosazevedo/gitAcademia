@@ -1,0 +1,19 @@
+1o) criar projeto no GitHub
+
+2o) clonar o projeto na sua estação de trabalho (primeira vez)
+
+3o) começar o projeto de programação na estação de trabalho
+
+
+Comandos básicos:
+
+1) clonagem do repositório (primeira vez)
+git clone <endereço>
+
+2) enviando códigos construídos na estação de trabalho
+git add . 
+git commit -m "a mensagem para a equipe"
+git push
+
+3) buscando códigos do servidor para a estação de trabalho
+git pull
