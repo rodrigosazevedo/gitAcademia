@@ -1,0 +1,15 @@
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\bin\Debug\net6.0\Exercicio4.exe
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\bin\Debug\net6.0\Exercicio4.deps.json
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\bin\Debug\net6.0\Exercicio4.runtimeconfig.json
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\bin\Debug\net6.0\Exercicio4.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\bin\Debug\net6.0\Exercicio4.pdb
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\Exercicio4.csproj.AssemblyReference.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\Exercicio4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\Exercicio4.AssemblyInfoInputs.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\Exercicio4.AssemblyInfo.cs
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\Exercicio4.csproj.CoreCompileInputs.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\Exercicio4.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\refint\Exercicio4.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\Exercicio4.pdb
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\Exercicio4.genruntimeconfig.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\28-04\Exercicio4\obj\Debug\net6.0\ref\Exercicio4.dll
