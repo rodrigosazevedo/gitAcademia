@@ -21,6 +21,6 @@ else
     Console.Write("\nAluno em recuperação. Digite a nota do exame: ");
     notaExame = double.Parse(Console.ReadLine());
 
-    if (notaExame >= 5.0) Console.WriteLine("\nAprovado!");
+    if ((((notaP1 + notaP2) / 2) + notaExame) / 2 >= 5.0) Console.WriteLine("\nAprovado!");
     else Console.WriteLine("\nReprovado!");
 }
