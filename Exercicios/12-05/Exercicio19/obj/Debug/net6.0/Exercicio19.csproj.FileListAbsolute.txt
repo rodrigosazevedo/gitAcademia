@@ -1,0 +1,15 @@
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\Exercicio19.csproj.AssemblyReference.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\Exercicio19.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\Exercicio19.AssemblyInfoInputs.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\Exercicio19.AssemblyInfo.cs
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\Exercicio19.csproj.CoreCompileInputs.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\bin\Debug\net6.0\Exercicio19.exe
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\bin\Debug\net6.0\Exercicio19.deps.json
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\bin\Debug\net6.0\Exercicio19.runtimeconfig.json
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\bin\Debug\net6.0\Exercicio19.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\bin\Debug\net6.0\Exercicio19.pdb
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\Exercicio19.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\refint\Exercicio19.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\Exercicio19.pdb
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\Exercicio19.genruntimeconfig.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\12-05\Exercicio19\obj\Debug\net6.0\ref\Exercicio19.dll
