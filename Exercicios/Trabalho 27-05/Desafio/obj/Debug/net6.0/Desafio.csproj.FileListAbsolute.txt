@@ -1,0 +1,15 @@
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\Desafio.csproj.AssemblyReference.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\Desafio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\Desafio.AssemblyInfoInputs.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\Desafio.AssemblyInfo.cs
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\Desafio.csproj.CoreCompileInputs.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\bin\Debug\net6.0\Desafio.exe
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\bin\Debug\net6.0\Desafio.deps.json
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\bin\Debug\net6.0\Desafio.runtimeconfig.json
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\bin\Debug\net6.0\Desafio.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\bin\Debug\net6.0\Desafio.pdb
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\Desafio.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\refint\Desafio.dll
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\Desafio.pdb
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\Desafio.genruntimeconfig.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Exercicios\Trabalho 27-05\Desafio\obj\Debug\net6.0\ref\Desafio.dll
