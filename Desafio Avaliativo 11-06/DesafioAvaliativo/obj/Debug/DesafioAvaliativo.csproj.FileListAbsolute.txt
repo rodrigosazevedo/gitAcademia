@@ -1,0 +1,11 @@
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\bin\Debug\DesafioAvaliativo.exe.config
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\bin\Debug\DesafioAvaliativo.exe
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\bin\Debug\DesafioAvaliativo.pdb
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.csproj.AssemblyReference.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.frmGaragem.resources
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.Properties.Resources.resources
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.csproj.GenerateResource.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.csproj.CoreCompileInputs.cache
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.exe
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.pdb
