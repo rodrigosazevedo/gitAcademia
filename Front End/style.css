@@ -1,40 +1,99 @@
-﻿body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-    max-width: 960px;
-    margin: auto;
-}
-
-    .container p {
-        text-align: justify;
-        text-indent: 50px;
-    }
-
-    .container h4 {
-        margin-left: 70px;
-        margin-bottom: 0px;
-    }
-
-    .container code {
-        display: block;
-        background-color: #b3b3b3;
-    }
-
-.imagem-web-design {
+﻿* {
     margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;    
 }
 
-figcaption {
-    font-size: 10px;
+body {
+    background-color:#f1f1f1
 }
 
-.footer {
-    margin-top: 20px;
+.container {    
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.elementos{
+    
+}
+
+.elementos:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+
+/* Partes do elemento na tabela - para tamanho do texto e alinhamento */
+
+.numero_elemento {
+    text-align: left;
+    font-size: 1em;
+}
+
+.simbolo_elemento {
     text-align: center;
-    background-color: #ffc400;
-    font-size: small;
-    height: 50px;
-    line-height: 50px;
+    font-size: 1.5em;
+    font-weight: bolder;
 }
+
+.nome_elemento {
+    text-align: center;
+    font-size: 1em;
+}
+
+.peso_elemento {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+/* Classes de elementos - para cores de fundo nas tabelas */
+
+.nao-metais {
+    background: #52ee61
+}
+
+.gases-nobres {
+    background: #759fff
+}
+
+.alcalinos {
+    background: #ecbe59
+}
+
+.alcalino-terrosos {
+    background: #dee955
+}
+
+.semimetais {
+    background: #3aefb6
+}
+
+.halogenios {
+    background: #62d5c4
+}
+
+.metais-transicao {
+    background: #fd8572
+}
+
+.outros-metais {
+    background: #4cddf3 
+}
+
+.lantanideos {
+    background: #ec77a3
+}
+
+.actinidios {
+    background: #c686cc
+}
+
+
+
+
