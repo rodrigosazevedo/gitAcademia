@@ -11,9 +11,12 @@
     <div class="container">
         <main>
             <header>
-                <h1>Tabela Periódica dos Elementos</h1>
             </header>
-            <table>
+            <h1>Tabela Periódica dos Elementos</h1>
+
+            <br>
+
+            <table id="tabela_periodica">
 
                 <tr>
                     <td class="elementos nao-metais">
@@ -215,7 +218,7 @@
                                 24,305
                             </div>
                         </a>
-                    </td> 
+                    </td>
                     <td colspan="10"></td>
                     <td class="elementos outros-metais">
                         <a href="#aluminio">
@@ -1449,6 +1452,10 @@
                     </td>
                 </tr>
 
+                <tr id="separador">
+                    <td colspan="18"></td>
+                </tr>
+
                 <tr>
                     <td colspan="3"></td>
                     <td class="elementos lantanideos">
@@ -1936,22 +1943,84 @@
                         </a>
                     </td>
                 </tr>
-
             </table>
 
+            <br>
 
-            <table>
+            <div id="legenda">
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda nao-metais"></div>
+                    Não metais
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda alcalinos"></div>
+                    Metais alcalinos
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda semimetais"></div>
+                    Semimetais
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda outros-metais"></div>
+                    Outros metais
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda lantanideos"></div>
+                    Lantanídeos
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda gases-nobres"></div>
+                    Gases nobres
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda alcalino-terrosos"></div>
+                    Metais alcalino-terrosos
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda halogenios"></div>
+                    Halogênios
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda metais-transicao"></div>
+                    Metais de transição
+                </div>
+
+                <div class="item_legenda">
+                    <div class="quadrado_legenda actinidios"></div>
+                    Actinídios
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <h2>Detalhes dos Elementos</h2>
+
+            <br>
+
+            <table id="tabela_detalhes">
                 <thead>
                     <tr>
-                        <th>Número</th>
+                        <th>Nº</th>
                         <th>Símbolo</th>
                         <th>Nome</th>
-                        <th>Nome Latim</th>
-                        <th>Massa atômica</th>
+                        <th>Latim</th>
+                        <th>Massa</th>
                         <th>Aparência</th>
                     </tr>
                 </thead>
-                <tr id="hidrogenio" class="nao-metais">
+                <tr id="hidrogenio" class="linhas_tabela nao-metais">
                     <td class="numero_tabela">1</td>
                     <td class="simbolo_tabela">H</td>
                     <td class="nome_tabela">Hidrogênio</td>
@@ -1959,7 +2028,7 @@
                     <td class="massa_tabela">1,008</td>
                     <td class="aparencia_tabela">Gás incolor</td>
                 </tr>
-                <tr id="helio" class="gases-nobres">
+                <tr id="helio" class="linhas_tabela gases-nobres">
                     <td class="numero_tabela">2</td>
                     <td class="simbolo_tabela">He</td>
                     <td class="nome_tabela">Hélio</td>
@@ -1967,7 +2036,7 @@
                     <td class="massa_tabela">4,0026</td>
                     <td class="aparencia_tabela">Gás incolor</td>
                 </tr>
-                <tr id="litio" class="alcalinos">
+                <tr id="litio" class="linhas_tabela alcalinos">
                     <td class="numero_tabela">3</td>
                     <td class="simbolo_tabela">Li</td>
                     <td class="nome_tabela">Lítio</td>
@@ -1975,8 +2044,933 @@
                     <td class="massa_tabela">6,94</td>
                     <td class="aparencia_tabela">Branco-prateado</td>
                 </tr>
+                <tr id="berilio" class="linhas_tabela alcalino-terrosos">
+                    <td class="numero_tabela">4</td>
+                    <td class="simbolo_tabela">Be</td>
+                    <td class="nome_tabela">Berílio</td>
+                    <td class="latim_tabela">Beryllium</td>
+                    <td class="massa_tabela">9,0122</td>
+                    <td class="aparencia_tabela">Cinza metálico</td>
+                </tr>
+                <tr id="boro" class="linhas_tabela semimetais">
+                    <td class="numero_tabela">5</td>
+                    <td class="simbolo_tabela">B</td>
+                    <td class="nome_tabela">Boro</td>
+                    <td class="latim_tabela">Borium</td>
+                    <td class="massa_tabela">10,81</td>
+                    <td class="aparencia_tabela">Marrom, preto</td>
+                </tr>
+                <tr id="carbono" class="linhas_tabela nao-metais">
+                    <td class="numero_tabela">6</td>
+                    <td class="simbolo_tabela">C</td>
+                    <td class="nome_tabela">Carbono</td>
+                    <td class="latim_tabela">Carbonium</td>
+                    <td class="massa_tabela">12,011</td>
+                    <td class="aparencia_tabela">Incolor (diamante) e preto (grafite)</td>
+                </tr>
+                <tr id="nitrogenio" class="linhas_tabela nao-metais">
+                    <td class="numero_tabela">7</td>
+                    <td class="simbolo_tabela">N</td>
+                    <td class="nome_tabela">Nitrogênio</td>
+                    <td class="latim_tabela">Nitrogenium</td>
+                    <td class="massa_tabela">14,007</td>
+                    <td class="aparencia_tabela">Gás, líquido ou sólido incolor</td>
+                </tr>
+                <tr id="oxigenio" class="linhas_tabela nao-metais">
+                    <td class="numero_tabela">8</td>
+                    <td class="simbolo_tabela">O</td>
+                    <td class="nome_tabela">Oxigênio</td>
+                    <td class="latim_tabela">Oxygenium</td>
+                    <td class="massa_tabela">15,999</td>
+                    <td class="aparencia_tabela">Incolor; líquido azul-pálido</td>
+                </tr>
+                <tr id="fluor" class="linhas_tabela halogenios">
+                    <td class="numero_tabela">9</td>
+                    <td class="simbolo_tabela">F</td>
+                    <td class="nome_tabela">Flúor</td>
+                    <td class="latim_tabela">Fluorum</td>
+                    <td class="massa_tabela">18,998</td>
+                    <td class="aparencia_tabela">Amarelo-esverdeado</td>
+                </tr>
+                <tr id="neonio" class="linhas_tabela gases-nobres">
+                    <td class="numero_tabela">10</td>
+                    <td class="simbolo_tabela">Ne</td>
+                    <td class="nome_tabela">Neônio</td>
+                    <td class="latim_tabela">Neon</td>
+                    <td class="massa_tabela">20,180</td>
+                    <td class="aparencia_tabela">Gás incolor</td>
+                </tr>
+                <tr id="sodio" class="linhas_tabela alcalinos">
+                    <td class="numero_tabela">11</td>
+                    <td class="simbolo_tabela">Na</td>
+                    <td class="nome_tabela">Sódio</td>
+                    <td class="latim_tabela">Natrium</td>
+                    <td class="massa_tabela">22,990</td>
+                    <td class="aparencia_tabela">Branco-prateado; metálico</td>
+                </tr>
+                <tr id="magnesio" class="linhas_tabela alcalino-terrosos">
+                    <td class="numero_tabela">12</td>
+                    <td class="simbolo_tabela">Mg</td>
+                    <td class="nome_tabela">Magnésio</td>
+                    <td class="latim_tabela">Magnesium</td>
+                    <td class="massa_tabela">24,305</td>
+                    <td class="aparencia_tabela">Branco-prateado</td>
+                </tr>
+                <tr id="aluminio" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">13</td>
+                    <td class="simbolo_tabela">Al</td>
+                    <td class="nome_tabela">Alumínio</td>
+                    <td class="latim_tabela">Alumen</td>
+                    <td class="massa_tabela">26,982</td>
+                    <td class="aparencia_tabela">Cinza prateado</td>
+                </tr>
+                <tr id="silicio" class="linhas_tabela semimetais">
+                    <td class="numero_tabela">14</td>
+                    <td class="simbolo_tabela">Si</td>
+                    <td class="nome_tabela">Silício</td>
+                    <td class="latim_tabela">Silicium</td>
+                    <td class="massa_tabela">28,085</td>
+                    <td class="aparencia_tabela">Cinza azulado escuro</td>
+                </tr>
+                <tr id="fosforo" class="linhas_tabela nao-metais">
+                    <td class="numero_tabela">15</td>
+                    <td class="simbolo_tabela">P</td>
+                    <td class="nome_tabela">Fósforo</td>
+                    <td class="latim_tabela">Phosphorus</td>
+                    <td class="massa_tabela">30,974</td>
+                    <td class="aparencia_tabela">Diversas cores</td>
+                </tr>
+                <tr id="enxofre" class="linhas_tabela nao-metais">
+                    <td class="numero_tabela">16</td>
+                    <td class="simbolo_tabela">S</td>
+                    <td class="nome_tabela">Enxofre</td>
+                    <td class="latim_tabela">Sulphur</td>
+                    <td class="massa_tabela">32,06</td>
+                    <td class="aparencia_tabela">Amarelo-limão</td>
+                </tr>
+                <tr id="cloro" class="linhas_tabela halogenios">
+                    <td class="numero_tabela">17</td>
+                    <td class="simbolo_tabela">Cl</td>
+                    <td class="nome_tabela">Cloro</td>
+                    <td class="latim_tabela">Clorum</td>
+                    <td class="massa_tabela">35,45</td>
+                    <td class="aparencia_tabela">Verde-amarelado</td>
+                </tr>
+                <tr id="argonio" class="linhas_tabela gases-nobres">
+                    <td class="numero_tabela">18</td>
+                    <td class="simbolo_tabela">Ar</td>
+                    <td class="nome_tabela">Argônio</td>
+                    <td class="latim_tabela">Argon</td>
+                    <td class="massa_tabela">39,948</td>
+                    <td class="aparencia_tabela">Incolor</td>
+                </tr>
+                <tr id="potassio" class="linhas_tabela alcalinos">
+                    <td class="numero_tabela">19</td>
+                    <td class="simbolo_tabela">K</td>
+                    <td class="nome_tabela">Potássio</td>
+                    <td class="latim_tabela">Kalium</td>
+                    <td class="massa_tabela">39,098</td>
+                    <td class="aparencia_tabela">Branco-prateado</td>
+                </tr>
+                <tr id="calcio" class="linhas_tabela alcalino-terrosos">
+                    <td class="numero_tabela">20</td>
+                    <td class="simbolo_tabela">Ca</td>
+                    <td class="nome_tabela">Cálcio</td>
+                    <td class="latim_tabela">Calcium</td>
+                    <td class="massa_tabela">40,078</td>
+                    <td class="aparencia_tabela">Branco-prateado</td>
+                </tr>
+                <tr id="escandio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">21</td>
+                    <td class="simbolo_tabela">Sc</td>
+                    <td class="nome_tabela">Escândio</td>
+                    <td class="latim_tabela">Scandium</td>
+                    <td class="massa_tabela">44,956</td>
+                    <td class="aparencia_tabela">Branco-prateado</td>
+                </tr>
+                <tr id="titanio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">22</td>
+                    <td class="simbolo_tabela">Ti</td>
+                    <td class="nome_tabela">Titânio</td>
+                    <td class="latim_tabela">Titanium</td>
+                    <td class="massa_tabela">47,867</td>
+                    <td class="aparencia_tabela">Prateado</td>
+                </tr>
+                <tr id="vanadio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">23</td>
+                    <td class="simbolo_tabela">V</td>
+                    <td class="nome_tabela">Vanádio</td>
+                    <td class="latim_tabela">Vanadium</td>
+                    <td class="massa_tabela">50,942</td>
+                    <td class="aparencia_tabela">Cinza-azulado-prateado metálico</td>
+                </tr>
+                <tr id="cromio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">24</td>
+                    <td class="simbolo_tabela">Cr</td>
+                    <td class="nome_tabela">Crômio</td>
+                    <td class="latim_tabela">Chromium</td>
+                    <td class="massa_tabela">51,996</td>
+                    <td class="aparencia_tabela">Prateado metálico</td>
+                </tr>
+                <tr id="manganes" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">25</td>
+                    <td class="simbolo_tabela">Mn</td>
+                    <td class="nome_tabela">Manganês</td>
+                    <td class="latim_tabela">Manganum</td>
+                    <td class="massa_tabela">54,938</td>
+                    <td class="aparencia_tabela">Prateado metálico</td>
+                </tr>
+                <tr id="ferro" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">26</td>
+                    <td class="simbolo_tabela">Fe</td>
+                    <td class="nome_tabela">Ferro</td>
+                    <td class="latim_tabela">Ferrum</td>
+                    <td class="massa_tabela">55,845</td>
+                    <td class="aparencia_tabela">Metálico brilhante com tons acinzentados</td>
+                </tr>
+                <tr id="cobalto" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">27</td>
+                    <td class="simbolo_tabela">Co</td>
+                    <td class="nome_tabela">Cobalto</td>
+                    <td class="latim_tabela">Cobaltum</td>
+                    <td class="massa_tabela">58,933</td>
+                    <td class="aparencia_tabela">Cinza metálico</td>
+                </tr>
+                <tr id="niquel" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">28</td>
+                    <td class="simbolo_tabela">Ni</td>
+                    <td class="nome_tabela">Níquel</td>
+                    <td class="latim_tabela">Niccolum</td>
+                    <td class="massa_tabela">58,693</td>
+                    <td class="aparencia_tabela">Brilhante com uma coloração dourada</td>
+                </tr>
+                <tr id="cobre" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">29</td>
+                    <td class="simbolo_tabela">Cu</td>
+                    <td class="nome_tabela">Cobre</td>
+                    <td class="latim_tabela">Cuprum</td>
+                    <td class="massa_tabela">63,546</td>
+                    <td class="aparencia_tabela">Metálico vermelho-alaranjado</td>
+                </tr>
+                <tr id="zinco" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">30</td>
+                    <td class="simbolo_tabela">Zn</td>
+                    <td class="nome_tabela">Zinco</td>
+                    <td class="latim_tabela">Zincum</td>
+                    <td class="massa_tabela">65,38</td>
+                    <td class="aparencia_tabela">Azul pálido grisáceo</td>
+                </tr>
+                <tr id="galio" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">31</td>
+                    <td class="simbolo_tabela">Ga</td>
+                    <td class="nome_tabela">Gálio</td>
+                    <td class="latim_tabela">Galium</td>
+                    <td class="massa_tabela">69,723</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="germanio" class="linhas_tabela semimetais">
+                    <td class="numero_tabela">32</td>
+                    <td class="simbolo_tabela">Ge</td>
+                    <td class="nome_tabela">Germânio</td>
+                    <td class="latim_tabela">Germanium</td>
+                    <td class="massa_tabela">72,630</td>
+                    <td class="aparencia_tabela">Branco acizentado</td>
+                </tr>
+                <tr id="arsenio" class="linhas_tabela semimetais">
+                    <td class="numero_tabela">33</td>
+                    <td class="simbolo_tabela">As</td>
+                    <td class="nome_tabela">Arsênio</td>
+                    <td class="latim_tabela">Arsenicum</td>
+                    <td class="massa_tabela">74,922</td>
+                    <td class="aparencia_tabela">Cinza metálico</td>
+                </tr>
+                <tr id="selenio" class="linhas_tabela nao-metais">
+                    <td class="numero_tabela">34</td>
+                    <td class="simbolo_tabela">Se</td>
+                    <td class="nome_tabela">Selénio</td>
+                    <td class="latim_tabela">Selenium</td>
+                    <td class="massa_tabela">78,971</td>
+                    <td class="aparencia_tabela">Preto, cinza e vermelho</td>
+                </tr>
+                <tr id="bromo" class="linhas_tabela halogenios">
+                    <td class="numero_tabela">35</td>
+                    <td class="simbolo_tabela">Br</td>
+                    <td class="nome_tabela">Bromo</td>
+                    <td class="latim_tabela">Bromum</td>
+                    <td class="massa_tabela">79,904</td>
+                    <td class="aparencia_tabela">Marrom avermelhado</td>
+                </tr>
+                <tr id="criptonio" class="linhas_tabela gases-nobres">
+                    <td class="numero_tabela">36</td>
+                    <td class="simbolo_tabela">Kr</td>
+                    <td class="nome_tabela">Criptônio</td>
+                    <td class="latim_tabela">Krypton</td>
+                    <td class="massa_tabela">83,798</td>
+                    <td class="aparencia_tabela">Gás incolor</td>
+                </tr>
+                <tr id="rubidio" class="linhas_tabela alcalinos">
+                    <td class="numero_tabela">37</td>
+                    <td class="simbolo_tabela"></td>
+                    <td class="nome_tabela">Rubídio</td>
+                    <td class="latim_tabela">Rubidium</td>
+                    <td class="massa_tabela">85,468</td>
+                    <td class="aparencia_tabela">Branco cinza</td>
+                </tr>
+                <tr id="estroncio" class="linhas_tabela alcalino-terrosos">
+                    <td class="numero_tabela">38</td>
+                    <td class="simbolo_tabela">Sr</td>
+                    <td class="nome_tabela">Estrôncio</td>
+                    <td class="latim_tabela">Strontium</td>
+                    <td class="massa_tabela">87,62</td>
+                    <td class="aparencia_tabela">Branco prateado metálico</td>
+                </tr>
+                <tr id="itrio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">39</td>
+                    <td class="simbolo_tabela">Y</td>
+                    <td class="nome_tabela">Ítrio</td>
+                    <td class="latim_tabela">Yttrium</td>
+                    <td class="massa_tabela">88,906</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="zirconio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">40</td>
+                    <td class="simbolo_tabela">Zr</td>
+                    <td class="nome_tabela">Zircônio</td>
+                    <td class="latim_tabela">Zirconium</td>
+                    <td class="massa_tabela">91,224</td>
+                    <td class="aparencia_tabela">Branco grisáceo</td>
+                </tr>
+                <tr id="niobio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">41</td>
+                    <td class="simbolo_tabela">Nb</td>
+                    <td class="nome_tabela">Nióbio</td>
+                    <td class="latim_tabela">Niobium</td>
+                    <td class="massa_tabela">92,906</td>
+                    <td class="aparencia_tabela">Cinza metálico, mas azulado quando oxidado</td>
+                </tr>
+                <tr id="molibdenio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">42</td>
+                    <td class="simbolo_tabela">Mo</td>
+                    <td class="nome_tabela">Molibdénio</td>
+                    <td class="latim_tabela">Molybdenum</td>
+                    <td class="massa_tabela">95,95</td>
+                    <td class="aparencia_tabela">Cinza metálico</td>
+                </tr>
+                <tr id="tecnecio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">43</td>
+                    <td class="simbolo_tabela">Tc</td>
+                    <td class="nome_tabela">Tecnécio</td>
+                    <td class="latim_tabela">Technetium</td>
+                    <td class="massa_tabela">98</td>
+                    <td class="aparencia_tabela">Cinza metálico brilhante</td>
+                </tr>
+                <tr id="rutenio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">44</td>
+                    <td class="simbolo_tabela">Ru</td>
+                    <td class="nome_tabela">Rutênio</td>
+                    <td class="latim_tabela">Ruthenium</td>
+                    <td class="massa_tabela">101,07</td>
+                    <td class="aparencia_tabela">Branco grisáceo</td>
+                </tr>
+                <tr id="rodio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">45</td>
+                    <td class="simbolo_tabela">Rh</td>
+                    <td class="nome_tabela">Ródio</td>
+                    <td class="latim_tabela">Rhodium</td>
+                    <td class="massa_tabela">102,91</td>
+                    <td class="aparencia_tabela">Branco prateado metálico</td>
+                </tr>
+                <tr id="paladio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">46</td>
+                    <td class="simbolo_tabela">Pd</td>
+                    <td class="nome_tabela">Paládio</td>
+                    <td class="latim_tabela">Palladium</td>
+                    <td class="massa_tabela">106,42</td>
+                    <td class="aparencia_tabela">Branco prateado metálico</td>
+                </tr>
+                <tr id="prata" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">47</td>
+                    <td class="simbolo_tabela">Ag</td>
+                    <td class="nome_tabela">Prata</td>
+                    <td class="latim_tabela">Argentum</td>
+                    <td class="massa_tabela">107,87</td>
+                    <td class="aparencia_tabela">Branco metálico prateado</td>
+                </tr>
+                <tr id="cadmio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">48</td>
+                    <td class="simbolo_tabela">Cd</td>
+                    <td class="nome_tabela">Cádmio</td>
+                    <td class="latim_tabela">Cadmium</td>
+                    <td class="massa_tabela">112,41</td>
+                    <td class="aparencia_tabela">Cinza prateado metálico</td>
+                </tr>
+                <tr id="indio" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">49</td>
+                    <td class="simbolo_tabela">In</td>
+                    <td class="nome_tabela">Índio</td>
+                    <td class="latim_tabela">Indium</td>
+                    <td class="massa_tabela">114,82</td>
+                    <td class="aparencia_tabela">Cinza prateado lustroso</td>
+                </tr>
+                <tr id="estanho" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">50</td>
+                    <td class="simbolo_tabela">Sn</td>
+                    <td class="nome_tabela">Estanho</td>
+                    <td class="latim_tabela">Stannum</td>
+                    <td class="massa_tabela">118,71</td>
+                    <td class="aparencia_tabela">Cinza prateado brilhante</td>
+                </tr>
+                <tr id="antimonio" class="linhas_tabela semimetais">
+                    <td class="numero_tabela">51</td>
+                    <td class="simbolo_tabela">Sb</td>
+                    <td class="nome_tabela">Antimônio</td>
+                    <td class="latim_tabela">Stibium</td>
+                    <td class="massa_tabela">121,76</td>
+                    <td class="aparencia_tabela">Cinza prateado lustroso</td>
+                </tr>
+                <tr id="telurio" class="linhas_tabela semimetais">
+                    <td class="numero_tabela">52</td>
+                    <td class="simbolo_tabela">Te</td>
+                    <td class="nome_tabela">Telúrio</td>
+                    <td class="latim_tabela">Tellurium</td>
+                    <td class="massa_tabela">127,60</td>
+                    <td class="aparencia_tabela">Cinza prateado lustroso</td>
+                </tr>
+                <tr id="iodo" class="linhas_tabela halogenios">
+                    <td class="numero_tabela">53</td>
+                    <td class="simbolo_tabela">I</td>
+                    <td class="nome_tabela">Iodo</td>
+                    <td class="latim_tabela">Iodum</td>
+                    <td class="massa_tabela">126,90</td>
+                    <td class="aparencia_tabela">Cinza metálico lustroso. Quando gasoso violeta</td>
+                </tr>
+                <tr id="xenonio" class="linhas_tabela gases-nobres">
+                    <td class="numero_tabela">54</td>
+                    <td class="simbolo_tabela">Xe</td>
+                    <td class="nome_tabela">Xenônio</td>
+                    <td class="latim_tabela">Xenon</td>
+                    <td class="massa_tabela">131,29</td>
+                    <td class="aparencia_tabela">Gás incolor</td>
+                </tr>
+                <tr id="cesio" class="linhas_tabela alcalinos">
+                    <td class="numero_tabela">55</td>
+                    <td class="simbolo_tabela">Cs</td>
+                    <td class="nome_tabela">Césio</td>
+                    <td class="latim_tabela">Caesium</td>
+                    <td class="massa_tabela">132,91</td>
+                    <td class="aparencia_tabela">Ouro prateado</td>
+                </tr>
+                <tr id="bario" class="linhas_tabela alcalino-terrosos">
+                    <td class="numero_tabela">56</td>
+                    <td class="simbolo_tabela">Ba</td>
+                    <td class="nome_tabela">Bário</td>
+                    <td class="latim_tabela">Barium</td>
+                    <td class="massa_tabela">137,33</td>
+                    <td class="aparencia_tabela">Cinza prateado</td>
+                </tr>
+                <tr id="lantanio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">57</td>
+                    <td class="simbolo_tabela">La</td>
+                    <td class="nome_tabela">Lantânio</td>
+                    <td class="latim_tabela">Lanthanum</td>
+                    <td class="massa_tabela">138,91</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="cerio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">58</td>
+                    <td class="simbolo_tabela">Ce</td>
+                    <td class="nome_tabela">Cério</td>
+                    <td class="latim_tabela">Cerium</td>
+                    <td class="massa_tabela">140,12</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="praseodimio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">59</td>
+                    <td class="simbolo_tabela">Pr</td>
+                    <td class="nome_tabela">Praseodímio</td>
+                    <td class="latim_tabela">Praseodymium</td>
+                    <td class="massa_tabela">140,91</td>
+                    <td class="aparencia_tabela">Branco cinza</td>
+                </tr>
+                <tr id="neodimio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">60</td>
+                    <td class="simbolo_tabela">Nd</td>
+                    <td class="nome_tabela">Neodímio</td>
+                    <td class="latim_tabela">Neodymium</td>
+                    <td class="massa_tabela">144,24</td>
+                    <td class="aparencia_tabela">Branco prateado ou amarelado</td>
+                </tr>
+                <tr id="promecio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">61</td>
+                    <td class="simbolo_tabela">Pm</td>
+                    <td class="nome_tabela">Promécio</td>
+                    <td class="latim_tabela">Promethium</td>
+                    <td class="massa_tabela">145</td>
+                    <td class="aparencia_tabela">Metálico</td>
+                </tr>
+                <tr id="samario" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">62</td>
+                    <td class="simbolo_tabela">Sm</td>
+                    <td class="nome_tabela">Samário</td>
+                    <td class="latim_tabela">Samarium</td>
+                    <td class="massa_tabela">150,36</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="europio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">63</td>
+                    <td class="simbolo_tabela">Eu</td>
+                    <td class="nome_tabela">Európio</td>
+                    <td class="latim_tabela">Europium</td>
+                    <td class="massa_tabela">151,96</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="gadolinio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">64</td>
+                    <td class="simbolo_tabela">Gd</td>
+                    <td class="nome_tabela">Gadolínio</td>
+                    <td class="latim_tabela">Gadolinium</td>
+                    <td class="massa_tabela">157,25</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="terbio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">65</td>
+                    <td class="simbolo_tabela">Tb</td>
+                    <td class="nome_tabela">Térbio</td>
+                    <td class="latim_tabela">Terbium</td>
+                    <td class="massa_tabela">158,93</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="disprosio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">66</td>
+                    <td class="simbolo_tabela">Dy</td>
+                    <td class="nome_tabela">Disprósio</td>
+                    <td class="latim_tabela">Dysprosium</td>
+                    <td class="massa_tabela">162,50</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="holmio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">67</td>
+                    <td class="simbolo_tabela">Ho</td>
+                    <td class="nome_tabela">Hólmio</td>
+                    <td class="latim_tabela">Holmium</td>
+                    <td class="massa_tabela">164,93</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="erbio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">68</td>
+                    <td class="simbolo_tabela">Er</td>
+                    <td class="nome_tabela">Érbio</td>
+                    <td class="latim_tabela">Erbium</td>
+                    <td class="massa_tabela">167,26</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="tulio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">69</td>
+                    <td class="simbolo_tabela">Tm</td>
+                    <td class="nome_tabela">Túlio</td>
+                    <td class="latim_tabela">Thulium</td>
+                    <td class="massa_tabela">168,93</td>
+                    <td class="aparencia_tabela">Cinza prateado</td>
+                </tr>
+                <tr id="iterbio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">70</td>
+                    <td class="simbolo_tabela">Yb</td>
+                    <td class="nome_tabela">Itérbio</td>
+                    <td class="latim_tabela">Ytterbium</td>
+                    <td class="massa_tabela">173,05</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="lutecio" class="linhas_tabela lantanideos">
+                    <td class="numero_tabela">71</td>
+                    <td class="simbolo_tabela">Lu</td>
+                    <td class="nome_tabela">Lutécio</td>
+                    <td class="latim_tabela">Lutetium</td>
+                    <td class="massa_tabela">174,97</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="hafnio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">72</td>
+                    <td class="simbolo_tabela">Hf</td>
+                    <td class="nome_tabela">Háfnio</td>
+                    <td class="latim_tabela">Hafnium</td>
+                    <td class="massa_tabela">178,49</td>
+                    <td class="aparencia_tabela">Cinza prateado</td>
+                </tr>
+                <tr id="tantalo" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">73</td>
+                    <td class="simbolo_tabela">Ta</td>
+                    <td class="nome_tabela">Tântalo</td>
+                    <td class="latim_tabela">Tantalum</td>
+                    <td class="massa_tabela">180,95</td>
+                    <td class="aparencia_tabela">Azul cinza</td>
+                </tr>
+                <tr id="tungstenio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">74</td>
+                    <td class="simbolo_tabela">W</td>
+                    <td class="nome_tabela">Tungstênio</td>
+                    <td class="latim_tabela">Wolframium</td>
+                    <td class="massa_tabela">183,84</td>
+                    <td class="aparencia_tabela">Branco-acinzentado brilhante</td>
+                </tr>
+                <tr id="renio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">75</td>
+                    <td class="simbolo_tabela">Re</td>
+                    <td class="nome_tabela">Rênio</td>
+                    <td class="latim_tabela">Rhenium</td>
+                    <td class="massa_tabela">186,21</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="osmio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">76</td>
+                    <td class="simbolo_tabela">Os</td>
+                    <td class="nome_tabela">Ósmio</td>
+                    <td class="latim_tabela">Osmium</td>
+                    <td class="massa_tabela">190,23</td>
+                    <td class="aparencia_tabela">Prateado com tons azulados</td>
+                </tr>
+                <tr id="iridio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">77</td>
+                    <td class="simbolo_tabela">Ir</td>
+                    <td class="nome_tabela">Irídio</td>
+                    <td class="latim_tabela">Iridium</td>
+                    <td class="massa_tabela">192,22</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="platina" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">78</td>
+                    <td class="simbolo_tabela">Pt</td>
+                    <td class="nome_tabela">Platina</td>
+                    <td class="latim_tabela">Platinum</td>
+                    <td class="massa_tabela">195,08</td>
+                    <td class="aparencia_tabela">Branco acinzentado</td>
+                </tr>
+                <tr id="ouro" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">79</td>
+                    <td class="simbolo_tabela">Au</td>
+                    <td class="nome_tabela">Ouro</td>
+                    <td class="latim_tabela">Aurum</td>
+                    <td class="massa_tabela">196,97</td>
+                    <td class="aparencia_tabela">Amarelo metálico</td>
+                </tr>
+                <tr id="mercurio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">80</td>
+                    <td class="simbolo_tabela">Hg</td>
+                    <td class="nome_tabela">Mercúrio</td>
+                    <td class="latim_tabela">Hydrargyrum</td>
+                    <td class="massa_tabela">200,59</td>
+                    <td class="aparencia_tabela">Prateado</td>
+                </tr>
+                <tr id="talio" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">81</td>
+                    <td class="simbolo_tabela">Tl</td>
+                    <td class="nome_tabela">Tálio</td>
+                    <td class="latim_tabela">Thallium</td>
+                    <td class="massa_tabela">204,38</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="Pb" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">82</td>
+                    <td class="simbolo_tabela">Pb</td>
+                    <td class="nome_tabela">Chumbo</td>
+                    <td class="latim_tabela">Plumbum</td>
+                    <td class="massa_tabela">207,2</td>
+                    <td class="aparencia_tabela">Cinza metálico</td>
+                </tr>
+                <tr id="Bi" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">83</td>
+                    <td class="simbolo_tabela">Bi</td>
+                    <td class="nome_tabela">Bismuto</td>
+                    <td class="latim_tabela">Bismuthum</td>
+                    <td class="massa_tabela">208,98</td>
+                    <td class="aparencia_tabela">Cinza lustroso</td>
+                </tr>
+                <tr id="Po" class="linhas_tabela semimetais">
+                    <td class="numero_tabela">84</td>
+                    <td class="simbolo_tabela">Po</td>
+                    <td class="nome_tabela">Polônio</td>
+                    <td class="latim_tabela">Polonium</td>
+                    <td class="massa_tabela">209</td>
+                    <td class="aparencia_tabela">Prateado</td>
+                </tr>
+                <tr id="astato" class="linhas_tabela halogenios">
+                    <td class="numero_tabela">85</td>
+                    <td class="simbolo_tabela">At</td>
+                    <td class="nome_tabela">Ástato</td>
+                    <td class="latim_tabela">Astatum</td>
+                    <td class="massa_tabela">210</td>
+                    <td class="aparencia_tabela">Metálico</td>
+                </tr>
+                <tr id="radonio" class="linhas_tabela gases-nobres">
+                    <td class="numero_tabela">86</td>
+                    <td class="simbolo_tabela">Rn</td>
+                    <td class="nome_tabela">Radônio</td>
+                    <td class="latim_tabela">Radon</td>
+                    <td class="massa_tabela">222</td>
+                    <td class="aparencia_tabela">Gás incolor</td>
+                </tr>
+                <tr id="francio" class="linhas_tabela alcalinos">
+                    <td class="numero_tabela">87</td>
+                    <td class="simbolo_tabela">Fr</td>
+                    <td class="nome_tabela">Frâncio</td>
+                    <td class="latim_tabela">Francium</td>
+                    <td class="massa_tabela">223</td>
+                    <td class="aparencia_tabela">Metálico</td>
+                </tr>
+                <tr id="radio" class="linhas_tabela alcalino-terrosos">
+                    <td class="numero_tabela">88</td>
+                    <td class="simbolo_tabela">Ra</td>
+                    <td class="nome_tabela">Rádio</td>
+                    <td class="latim_tabela">Radium</td>
+                    <td class="massa_tabela">226</td>
+                    <td class="aparencia_tabela">Metálico branco prateado</td>
+                </tr>
+                <tr id="actinio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">89</td>
+                    <td class="simbolo_tabela">Ac</td>
+                    <td class="nome_tabela">Actínio</td>
+                    <td class="latim_tabela">Actinium</td>
+                    <td class="massa_tabela">227</td>
+                    <td class="aparencia_tabela">Prateado</td>
+                </tr>
+                <tr id="torio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">90</td>
+                    <td class="simbolo_tabela">Th</td>
+                    <td class="nome_tabela">Tório</td>
+                    <td class="latim_tabela">Thorium</td>
+                    <td class="massa_tabela">232,04</td>
+                    <td class="aparencia_tabela">Branco prateado</td>
+                </tr>
+                <tr id="protactinio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">91</td>
+                    <td class="simbolo_tabela">Pa</td>
+                    <td class="nome_tabela">Protactínio</td>
+                    <td class="latim_tabela">Protactinium</td>
+                    <td class="massa_tabela">231,04</td>
+                    <td class="aparencia_tabela">Branco prateado brilhante</td>
+                </tr>
+                <tr id="uranio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">92</td>
+                    <td class="simbolo_tabela">U</td>
+                    <td class="nome_tabela">Urânio</td>
+                    <td class="latim_tabela">Uranium</td>
+                    <td class="massa_tabela">238,03</td>
+                    <td class="aparencia_tabela">Cinza prateado metálico</td>
+                </tr>
+                <tr id="netunio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">93</td>
+                    <td class="simbolo_tabela">Np</td>
+                    <td class="nome_tabela">Netúnio</td>
+                    <td class="latim_tabela">Neptunium</td>
+                    <td class="massa_tabela">237</td>
+                    <td class="aparencia_tabela">Prateado metálico</td>
+                </tr>
+                <tr id="plutonio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">94</td>
+                    <td class="simbolo_tabela">Pu</td>
+                    <td class="nome_tabela">Plutônio</td>
+                    <td class="latim_tabela">Plutonium</td>
+                    <td class="massa_tabela">244</td>
+                    <td class="aparencia_tabela">Prateado metálico</td>
+                </tr>
+                <tr id="americio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">95</td>
+                    <td class="simbolo_tabela">Am</td>
+                    <td class="nome_tabela">Amerício</td>
+                    <td class="latim_tabela">Americium</td>
+                    <td class="massa_tabela">243</td>
+                    <td class="aparencia_tabela">Prateado metálico</td>
+                </tr>
+                <tr id="curio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">96</td>
+                    <td class="simbolo_tabela">Cm</td>
+                    <td class="nome_tabela">Cúrio</td>
+                    <td class="latim_tabela">Curium</td>
+                    <td class="massa_tabela">247</td>
+                    <td class="aparencia_tabela">Prateado</td>
+                </tr>
+                <tr id="berquelio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">97</td>
+                    <td class="simbolo_tabela">Bk</td>
+                    <td class="nome_tabela">Berquélio</td>
+                    <td class="latim_tabela">Berkelium</td>
+                    <td class="massa_tabela">247</td>
+                    <td class="aparencia_tabela">Prateado</td>
+                </tr>
+                <tr id="californio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">98</td>
+                    <td class="simbolo_tabela">Cf</td>
+                    <td class="nome_tabela">Califórnio</td>
+                    <td class="latim_tabela">Californium</td>
+                    <td class="massa_tabela">251</td>
+                    <td class="aparencia_tabela">Prateado</td>
+                </tr>
+                <tr id="einstenio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">99</td>
+                    <td class="simbolo_tabela">Es</td>
+                    <td class="nome_tabela">Einsténio</td>
+                    <td class="latim_tabela">Einsteinium</td>
+                    <td class="massa_tabela">252</td>
+                    <td class="aparencia_tabela">Prateado</td>
+                </tr>
+                <tr id="fermio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">100</td>
+                    <td class="simbolo_tabela">Fm</td>
+                    <td class="nome_tabela">Férmio</td>
+                    <td class="latim_tabela">Fermium</td>
+                    <td class="massa_tabela">257</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="mendelevio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">101</td>
+                    <td class="simbolo_tabela">Md</td>
+                    <td class="nome_tabela">Mendelévio</td>
+                    <td class="latim_tabela">Mendelevium</td>
+                    <td class="massa_tabela">258</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="nobelio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">102</td>
+                    <td class="simbolo_tabela">No</td>
+                    <td class="nome_tabela">Nobélio</td>
+                    <td class="latim_tabela">Nobelium</td>
+                    <td class="massa_tabela">259</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="laurencio" class="linhas_tabela actinidios">
+                    <td class="numero_tabela">103</td>
+                    <td class="simbolo_tabela">Lr</td>
+                    <td class="nome_tabela">Laurêncio</td>
+                    <td class="latim_tabela">Lawrencium</td>
+                    <td class="massa_tabela">262</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="rutherfordio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">104</td>
+                    <td class="simbolo_tabela">Rf</td>
+                    <td class="nome_tabela">Rutherfórdio</td>
+                    <td class="latim_tabela">Rhuterfordium</td>
+                    <td class="massa_tabela">267</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="dubnio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">105</td>
+                    <td class="simbolo_tabela">Db</td>
+                    <td class="nome_tabela">Dúbnio</td>
+                    <td class="latim_tabela">Dubnium</td>
+                    <td class="massa_tabela">268</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="seaborgio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">106</td>
+                    <td class="simbolo_tabela">Sg</td>
+                    <td class="nome_tabela">Seabórgio</td>
+                    <td class="latim_tabela">Seaborgium</td>
+                    <td class="massa_tabela">269</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="bohrio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">107</td>
+                    <td class="simbolo_tabela">Bh</td>
+                    <td class="nome_tabela">Bóhrio</td>
+                    <td class="latim_tabela">Bohrium</td>
+                    <td class="massa_tabela">270</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="hassio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">108</td>
+                    <td class="simbolo_tabela">Hs</td>
+                    <td class="nome_tabela">Hássio</td>
+                    <td class="latim_tabela">Hassium</td>
+                    <td class="massa_tabela">269</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="meitnerio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">109</td>
+                    <td class="simbolo_tabela">Mt</td>
+                    <td class="nome_tabela">Meitnério</td>
+                    <td class="latim_tabela">Meitnerium</td>
+                    <td class="massa_tabela">278</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="darmstadtio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">110</td>
+                    <td class="simbolo_tabela">Ds</td>
+                    <td class="nome_tabela">Darmstádtio</td>
+                    <td class="latim_tabela">Darmstadtium</td>
+                    <td class="massa_tabela">281</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="roentgenio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">111</td>
+                    <td class="simbolo_tabela">Rg</td>
+                    <td class="nome_tabela">Roentgénio</td>
+                    <td class="latim_tabela">Roentgenium</td>
+                    <td class="massa_tabela">281</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="copernicio" class="linhas_tabela metais-transicao">
+                    <td class="numero_tabela">112</td>
+                    <td class="simbolo_tabela">Cn</td>
+                    <td class="nome_tabela">Copernício</td>
+                    <td class="latim_tabela">Copernicium</td>
+                    <td class="massa_tabela">285</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="nihonio" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">113</td>
+                    <td class="simbolo_tabela">Nh</td>
+                    <td class="nome_tabela">Nihônio</td>
+                    <td class="latim_tabela">Nihonium</td>
+                    <td class="massa_tabela">286</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="flerovio" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">114</td>
+                    <td class="simbolo_tabela">Fl</td>
+                    <td class="nome_tabela">Fleróvio</td>
+                    <td class="latim_tabela">Flerovium</td>
+                    <td class="massa_tabela">289</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="moscovio" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">115</td>
+                    <td class="simbolo_tabela">Mc</td>
+                    <td class="nome_tabela">Moscóvio</td>
+                    <td class="latim_tabela">Moscovium</td>
+                    <td class="massa_tabela">288</td>
+                    <td class="aparencia_tabela">Cinza metálico</td>
+                </tr>
+                <tr id="livermorio" class="linhas_tabela outros-metais">
+                    <td class="numero_tabela">116</td>
+                    <td class="simbolo_tabela">Lv</td>
+                    <td class="nome_tabela">Livermório</td>
+                    <td class="latim_tabela">Livermorium</td>
+                    <td class="massa_tabela">293</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="tenessino" class="linhas_tabela halogenios">
+                    <td class="numero_tabela">117</td>
+                    <td class="simbolo_tabela">Ts</td>
+                    <td class="nome_tabela">Tenessino</td>
+                    <td class="latim_tabela">Tennessine</td>
+                    <td class="massa_tabela">294</td>
+                    <td class="aparencia_tabela">Desconhecida</td>
+                </tr>
+                <tr id="oganessonio" class="linhas_tabela gases-nobres">
+                    <td class="numero_tabela">118</td>
+                    <td class="simbolo_tabela">Og</td>
+                    <td class="nome_tabela">Oganessônio</td>
+                    <td class="latim_tabela">Oganesson</td>
+                    <td class="massa_tabela">294</td>
+                    <td class="aparencia_tabela">Metálico, de branco a levemente prateado</td>
+                </tr>
             </table>
         </main>
     </div>
+
+    <div id="botao_inicio">
+        <a href="#tabela_periodica">INÍCIO</a>
+    </div>
+
 </body>
 </html>

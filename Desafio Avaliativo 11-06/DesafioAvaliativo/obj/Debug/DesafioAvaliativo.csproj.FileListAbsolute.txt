@@ -9,3 +9,5 @@ C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvalia
 C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.csproj.CoreCompileInputs.cache
 C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.exe
 C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.pdb
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.frmSaida.resources
+C:\Users\Lourdes\source\repos\gitAcademia\Desafio Avaliativo 11-06\DesafioAvaliativo\obj\Debug\DesafioAvaliativo.frmEntrada.resources
