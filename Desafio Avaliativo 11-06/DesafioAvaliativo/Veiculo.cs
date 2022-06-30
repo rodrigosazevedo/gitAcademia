@@ -31,5 +31,17 @@ namespace DesafioAvaliativo
         public double ValorCobrado { get => valorCobrado; set => valorCobrado = value; }
         public DateTime DataSaida { get => dataSaida; set => dataSaida = value; }
         public TimeSpan HoraSaida { get => horaSaida; set => horaSaida = value; }
+
+        public static bool jaCadastrado(string placa, List<Veiculo> lista)
+        {
+            foreach (Veiculo veiculo in lista)
+            {
+                if (placa.Equals(veiculo.placaVeiculo))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

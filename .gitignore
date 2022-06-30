@@ -1,6 +1,8 @@
+bin
+venv
+.DS_Store
 .exe
 .o
-.obj
-bin
-.sh
-.vs
+.vscode
+.idea
+.vscode

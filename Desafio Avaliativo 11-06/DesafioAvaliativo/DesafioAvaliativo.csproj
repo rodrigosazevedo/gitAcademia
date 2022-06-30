@@ -46,18 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmSaida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSaida.Designer.cs">
-      <DependentUpon>frmSaida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmEntrada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEntrada.Designer.cs">
-      <DependentUpon>frmEntrada.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGaragem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,12 +56,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Veiculo.cs" />
-    <EmbeddedResource Include="frmSaida.resx">
-      <DependentUpon>frmSaida.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEntrada.resx">
-      <DependentUpon>frmEntrada.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGaragem.resx">
       <DependentUpon>frmGaragem.cs</DependentUpon>
     </EmbeddedResource>

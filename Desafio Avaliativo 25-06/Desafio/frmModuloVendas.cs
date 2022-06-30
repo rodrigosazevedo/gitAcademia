@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Desafio
 {
+
     public partial class frmModuloVendas : Form
     {
         public frmModuloVendas()
@@ -23,12 +24,6 @@ namespace Desafio
             frmGerarVenda.ShowDialog();
         }
 
-        private void btnHistoricoVenda_Click(object sender, EventArgs e)
-        {
-            frmHistoricoVenda frmHistoricoVenda = new frmHistoricoVenda(); 
-            frmHistoricoVenda.ShowDialog();
-        }
-
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             frmClientes frmClientes = new frmClientes();
@@ -40,5 +35,6 @@ namespace Desafio
             frmProdutos frmProdutos = new frmProdutos();
             frmProdutos.ShowDialog();  
         }
+
     }
 }

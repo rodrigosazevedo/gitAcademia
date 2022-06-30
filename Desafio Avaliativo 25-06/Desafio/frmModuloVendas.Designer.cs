@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnHistoricoVenda = new System.Windows.Forms.Button();
             this.btnGerarVenda = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCadastrarProdutos = new System.Windows.Forms.Button();
@@ -40,24 +39,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnHistoricoVenda);
             this.groupBox1.Controls.Add(this.btnGerarVenda);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 62);
+            this.groupBox1.Size = new System.Drawing.Size(106, 62);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "TELAS";
-            // 
-            // btnHistoricoVenda
-            // 
-            this.btnHistoricoVenda.Location = new System.Drawing.Point(104, 19);
-            this.btnHistoricoVenda.Name = "btnHistoricoVenda";
-            this.btnHistoricoVenda.Size = new System.Drawing.Size(92, 33);
-            this.btnHistoricoVenda.TabIndex = 2;
-            this.btnHistoricoVenda.Text = "Histórico Venda";
-            this.btnHistoricoVenda.UseVisualStyleBackColor = true;
-            this.btnHistoricoVenda.Click += new System.EventHandler(this.btnHistoricoVenda_Click);
+            this.groupBox1.Text = "OPERAÇÕES";
             // 
             // btnGerarVenda
             // 
@@ -118,7 +106,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnHistoricoVenda;
         private System.Windows.Forms.Button btnGerarVenda;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCadastrarProdutos;

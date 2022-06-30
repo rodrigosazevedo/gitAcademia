@@ -67,7 +67,7 @@ namespace DesafioAvaliativo
 
             foreach(Veiculo veiculo in listaVeiculos)
             {
-                escritorArquivo.WriteLine(veiculo.PlacaVeiculo + ";" + veiculo.DataEntrada + ";" + veiculo.HoraEntrada.ToString("hh:mm:ss") +
+                escritorArquivo.WriteLine(veiculo.PlacaVeiculo + ";" + veiculo.DataEntrada + ";" + veiculo.HoraEntrada +
                                           ";" + veiculo.DataSaida + ";" + veiculo.HoraSaida + ";" + veiculo.TempoPermanencia +
                                           ";" + veiculo.ValorCobrado);
                 escritorArquivo.Flush();
