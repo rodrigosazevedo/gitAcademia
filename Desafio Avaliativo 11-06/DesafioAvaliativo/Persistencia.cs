@@ -8,14 +8,21 @@ using System.Threading.Tasks;
 namespace DesafioAvaliativo
 {
     internal class Persistencia
-    {
+    {        
+        /// Função utilizada para ler o arquivo .dat ao abrir o programa e popular a lista que será 
+        /// utilizada durante a execução.
         public static void lerArquivoVeiculosEntrada(List<Veiculo> listaVeiculos) 
         {
             StreamReader leitorArquivo = new StreamReader("veiculosEntrada.dat");
             string linhaArquivo;
             string[] vetorDados;
 
-            if (leitorArquivo.EndOfStream) return; 
+            //Caso o arquivo esteja vazio (para evitar erros)
+            if (leitorArquivo.EndOfStream)
+            {
+                leitorArquivo.Close();
+                return;
+            }
 
             do
             {
@@ -23,16 +30,24 @@ namespace DesafioAvaliativo
                 vetorDados = linhaArquivo.Split(';');
                 listaVeiculos.Add(new Veiculo(vetorDados[0], DateTime.Parse(vetorDados[1]), TimeSpan.Parse(vetorDados[2])));
             } while (!leitorArquivo.EndOfStream);
+
             leitorArquivo.Close();
         }
 
+        /// Função utilizada para ler o arquivo .dat ao abrir o programa e popular a lista que será 
+        /// utilizada durante a execução.
         public static void lerArquivoVeiculosSaida(List<Veiculo> listaVeiculos) 
         {
             StreamReader leitorArquivo = new StreamReader("veiculosSaida.dat");
             string linhaArquivo;
             string[] vetorDados;
 
-            if (leitorArquivo.EndOfStream) return; 
+            //Caso o arquivo esteja vazio (para evitar erros)
+            if (leitorArquivo.EndOfStream)
+            {
+                leitorArquivo.Close();
+                return;
+            }
 
             do
             {
@@ -48,6 +63,8 @@ namespace DesafioAvaliativo
 
         }
 
+        /// Função utilizada para transferir o conteúdo da lista de objetos para o arquivo .dat, 
+        /// para a próxima vez que o programa for aberto
         public static void gravarArquivoVeiculosEntrada(List<Veiculo> listaVeiculos) 
         {
             StreamWriter escritorArquivo = new StreamWriter("veiculosEntrada.dat");
@@ -61,6 +78,8 @@ namespace DesafioAvaliativo
             escritorArquivo.Close();
         }
 
+        /// Função utilizada para transferir o conteúdo da lista de objetos para o arquivo .dat, 
+        /// para a próxima vez que o programa for aberto
         public static void gravarArquivoVeiculosSaida(List<Veiculo> listaVeiculos) 
         {
             StreamWriter escritorArquivo = new StreamWriter("veiculosSaida.dat");
