@@ -5,22 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using Microsoft.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Desafio
 {
     internal class Cliente
     {
         string razaosocial;
-        private int cnpj;
+        private long cnpj;
         private string email;
-        private int telefone;
+        private long telefone;
         private string endereco;
         private string bairro;
         private int cep;
         private string cidade;
         private string uf;
 
-        public Cliente(string razaosocial, int cnpj, string email, int telefone, string endereco,
+        public Cliente(string razaosocial, long cnpj, string email, long telefone, string endereco,
                        string bairro, int cep, string cidade, string uf)
         {
             this.razaosocial = razaosocial;
@@ -35,15 +36,17 @@ namespace Desafio
         }
 
         public string Razaosocial { get => razaosocial; set => razaosocial = value; }
-        public int Cnpj { get => cnpj; set => cnpj = value; }
+        public long Cnpj { get => cnpj; set => cnpj = value; }
         public string Email { get => email; set => email = value; }
-        public int Telefone { get => telefone; set => telefone = value; }
+        public long Telefone { get => telefone; set => telefone = value; }
         public string Endereco { get => endereco; set => endereco = value; }
         public string Bairro { get => bairro; set => bairro = value; }
         public int Cep { get => cep; set => cep = value; }
         public string Cidade { get => cidade; set => cidade = value; }
         public string Uf { get => uf; set => uf = value; }
 
+
+        /// Salva todos os dados daquele objeto Cliente no banco de dados
         public void SalvarDados()
         {
             SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProjetosAcademiaConnectionString"].ConnectionString);
@@ -58,9 +61,9 @@ namespace Desafio
 
             cmd.CommandText = "INSERT into cliente values (@RazaoSocial,@CNPJ,@Email,@Telefone,@Endereco,@Bairro,@CEP,@Cidade,@UF)";
             cmd.Parameters.Add("@RazaoSocial", System.Data.SqlDbType.VarChar);
-            cmd.Parameters.Add("@CNPJ", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@CNPJ", System.Data.SqlDbType.BigInt);
             cmd.Parameters.Add("@Email", System.Data.SqlDbType.VarChar);
-            cmd.Parameters.Add("@Telefone", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@Telefone", System.Data.SqlDbType.BigInt);
             cmd.Parameters.Add("@Endereco", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@Bairro", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@CEP", System.Data.SqlDbType.Int);

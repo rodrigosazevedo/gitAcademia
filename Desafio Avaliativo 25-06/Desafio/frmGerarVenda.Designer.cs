@@ -148,6 +148,7 @@
             // 
             this.txtVenda_NF.Enabled = false;
             this.txtVenda_NF.Location = new System.Drawing.Point(21, 83);
+            this.txtVenda_NF.MaxLength = 9;
             this.txtVenda_NF.Name = "txtVenda_NF";
             this.txtVenda_NF.Size = new System.Drawing.Size(100, 20);
             this.txtVenda_NF.TabIndex = 1;
@@ -155,12 +156,14 @@
             // 
             // txtVenda_CNPJ
             // 
+            this.txtVenda_CNPJ.Enabled = false;
             this.txtVenda_CNPJ.Location = new System.Drawing.Point(239, 37);
             this.txtVenda_CNPJ.Mask = "00.000.000/0000-00";
             this.txtVenda_CNPJ.Name = "txtVenda_CNPJ";
             this.txtVenda_CNPJ.Size = new System.Drawing.Size(112, 20);
             this.txtVenda_CNPJ.TabIndex = 1;
             this.txtVenda_CNPJ.TabStop = false;
+            this.txtVenda_CNPJ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lblVenda_CNPJ
             // 
@@ -322,7 +325,6 @@
             this.Controls.Add(this.grpCadastroProduto);
             this.Name = "frmGerarVenda";
             this.Text = "Gerar Venda";
-            this.Load += new System.EventHandler(this.frmGerarVenda_Load);
             this.grpCadastroProduto.ResumeLayout(false);
             this.grpCadastroProduto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItensVenda)).EndInit();

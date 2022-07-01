@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.grpCadastroProduto = new System.Windows.Forms.GroupBox();
-            this.txtProduto_Custo = new System.Windows.Forms.MaskedTextBox();
+            this.txtProduto_Custo = new System.Windows.Forms.TextBox();
             this.txtProduto_CNPJ = new System.Windows.Forms.MaskedTextBox();
             this.txtProduto_Unidade = new System.Windows.Forms.TextBox();
             this.lblProduto_Unidade = new System.Windows.Forms.Label();
@@ -72,10 +72,9 @@
             // txtProduto_Custo
             // 
             this.txtProduto_Custo.Location = new System.Drawing.Point(21, 187);
-            this.txtProduto_Custo.Mask = "00,00";
             this.txtProduto_Custo.Name = "txtProduto_Custo";
             this.txtProduto_Custo.Size = new System.Drawing.Size(63, 20);
-            this.txtProduto_Custo.TabIndex = 5;
+            this.txtProduto_Custo.TabIndex = 23;
             // 
             // txtProduto_CNPJ
             // 
@@ -84,12 +83,13 @@
             this.txtProduto_CNPJ.Name = "txtProduto_CNPJ";
             this.txtProduto_CNPJ.Size = new System.Drawing.Size(121, 20);
             this.txtProduto_CNPJ.TabIndex = 4;
+            this.txtProduto_CNPJ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtProduto_Unidade
             // 
             this.txtProduto_Unidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProduto_Unidade.Location = new System.Drawing.Point(276, 87);
-            this.txtProduto_Unidade.MaxLength = 2;
+            this.txtProduto_Unidade.MaxLength = 10;
             this.txtProduto_Unidade.Name = "txtProduto_Unidade";
             this.txtProduto_Unidade.Size = new System.Drawing.Size(44, 20);
             this.txtProduto_Unidade.TabIndex = 2;
@@ -126,6 +126,7 @@
             // 
             this.txtProduto_RazaoSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProduto_RazaoSocial.Location = new System.Drawing.Point(21, 137);
+            this.txtProduto_RazaoSocial.MaxLength = 50;
             this.txtProduto_RazaoSocial.Name = "txtProduto_RazaoSocial";
             this.txtProduto_RazaoSocial.Size = new System.Drawing.Size(209, 20);
             this.txtProduto_RazaoSocial.TabIndex = 3;
@@ -143,6 +144,7 @@
             // 
             this.txtProduto_Descricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProduto_Descricao.Location = new System.Drawing.Point(21, 87);
+            this.txtProduto_Descricao.MaxLength = 50;
             this.txtProduto_Descricao.Name = "txtProduto_Descricao";
             this.txtProduto_Descricao.Size = new System.Drawing.Size(249, 20);
             this.txtProduto_Descricao.TabIndex = 1;
@@ -160,6 +162,7 @@
             // 
             this.txtProduto_Codigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProduto_Codigo.Location = new System.Drawing.Point(21, 37);
+            this.txtProduto_Codigo.MaxLength = 20;
             this.txtProduto_Codigo.Name = "txtProduto_Codigo";
             this.txtProduto_Codigo.Size = new System.Drawing.Size(125, 20);
             this.txtProduto_Codigo.TabIndex = 0;
@@ -236,7 +239,7 @@
         private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.Button btnLimparProduto;
         private System.Windows.Forms.Button btnConfirmarProduto;
-        private System.Windows.Forms.MaskedTextBox txtProduto_Custo;
         private System.Windows.Forms.MaskedTextBox txtProduto_CNPJ;
+        private System.Windows.Forms.TextBox txtProduto_Custo;
     }
 }

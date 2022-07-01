@@ -33,6 +33,7 @@ namespace Desafio
         public double Quantidade { get => quantidade; set => quantidade = value; }
         public double ValorTotal { get => valorTotal; set => valorTotal = value; }
 
+        /// Salva todos os dados de uma lista de objetos itensVenda no banco de dados.
         public static void SalvarDados(List<ItemVenda> itensVenda)
         {
             foreach (ItemVenda itemVenda in itensVenda)

@@ -11,12 +11,12 @@ namespace Desafio
     internal class Venda
     {
         int numeroNF;
-        int cnpjCliente;
+        long cnpjCliente;
         string razaoCliente;
         double valorTotal;
         DateTime dataVenda;
 
-        public Venda(int numeroNF, int cnpjCliente, string razaoCliente, double valorTotal, DateTime dataVenda)
+        public Venda(int numeroNF, long cnpjCliente, string razaoCliente, double valorTotal, DateTime dataVenda)
         {
             this.NumeroNF = numeroNF;
             this.CnpjCliente = cnpjCliente;
@@ -26,11 +26,12 @@ namespace Desafio
         }
 
         public int NumeroNF { get => numeroNF; set => numeroNF = value; }
-        public int CnpjCliente { get => cnpjCliente; set => cnpjCliente = value; }
+        public long CnpjCliente { get => cnpjCliente; set => cnpjCliente = value; }
         public string RazaoCliente { get => razaoCliente; set => razaoCliente = value; }
         public double ValorTotal { get => valorTotal; set => valorTotal = value; }
-        public DateTime DataVenda { get => DataVenda; set => DataVenda = value; }
+        public DateTime DataVenda { get => dataVenda; set => dataVenda = value; }
 
+        /// Salva todos os dados daquele objeto Venda no banco de dados
         public void SalvarDados()
         {
             SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProjetosAcademiaConnectionString"].ConnectionString);
@@ -45,7 +46,7 @@ namespace Desafio
 
             cmd.CommandText = "INSERT into venda values (@NumeroNF,@Cliente_CNPJ,@Cliente_RazaoSocial,@ValorTotal,@DataVenda)";
             cmd.Parameters.Add("@NumeroNF", System.Data.SqlDbType.Int);
-            cmd.Parameters.Add("@Cliente_CNPJ", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@Cliente_CNPJ", System.Data.SqlDbType.BigInt);
             cmd.Parameters.Add("@Cliente_RazaoSocial", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@ValorTotal", System.Data.SqlDbType.Decimal);
             cmd.Parameters.Add("@DataVenda", System.Data.SqlDbType.Date);

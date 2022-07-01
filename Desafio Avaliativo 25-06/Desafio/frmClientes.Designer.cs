@@ -67,6 +67,7 @@
             // 
             this.txtCliente_RazaoSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCliente_RazaoSocial.Location = new System.Drawing.Point(21, 37);
+            this.txtCliente_RazaoSocial.MaxLength = 50;
             this.txtCliente_RazaoSocial.Name = "txtCliente_RazaoSocial";
             this.txtCliente_RazaoSocial.Size = new System.Drawing.Size(171, 20);
             this.txtCliente_RazaoSocial.TabIndex = 0;
@@ -84,10 +85,10 @@
             // 
             this.txtCliente_Email.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtCliente_Email.Location = new System.Drawing.Point(21, 87);
+            this.txtCliente_Email.MaxLength = 50;
             this.txtCliente_Email.Name = "txtCliente_Email";
             this.txtCliente_Email.Size = new System.Drawing.Size(212, 20);
             this.txtCliente_Email.TabIndex = 2;
-            this.txtCliente_Email.Validating += new System.ComponentModel.CancelEventHandler(this.txtCliente_Email_Validating);
             // 
             // lblCliente_Email
             // 
@@ -101,6 +102,7 @@
             // txtCliente_Endereco
             // 
             this.txtCliente_Endereco.Location = new System.Drawing.Point(21, 137);
+            this.txtCliente_Endereco.MaxLength = 50;
             this.txtCliente_Endereco.Name = "txtCliente_Endereco";
             this.txtCliente_Endereco.Size = new System.Drawing.Size(212, 20);
             this.txtCliente_Endereco.TabIndex = 4;
@@ -117,6 +119,7 @@
             // txtCliente_Bairro
             // 
             this.txtCliente_Bairro.Location = new System.Drawing.Point(239, 137);
+            this.txtCliente_Bairro.MaxLength = 50;
             this.txtCliente_Bairro.Name = "txtCliente_Bairro";
             this.txtCliente_Bairro.Size = new System.Drawing.Size(113, 20);
             this.txtCliente_Bairro.TabIndex = 5;
@@ -243,6 +246,7 @@
             // txtCliente_Cidade
             // 
             this.txtCliente_Cidade.Location = new System.Drawing.Point(127, 187);
+            this.txtCliente_Cidade.MaxLength = 50;
             this.txtCliente_Cidade.Name = "txtCliente_Cidade";
             this.txtCliente_Cidade.Size = new System.Drawing.Size(113, 20);
             this.txtCliente_Cidade.TabIndex = 23;
@@ -255,6 +259,7 @@
             this.txtCliente_CEP.Name = "txtCliente_CEP";
             this.txtCliente_CEP.Size = new System.Drawing.Size(100, 20);
             this.txtCliente_CEP.TabIndex = 6;
+            this.txtCliente_CEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtCliente_Telefone
             // 
@@ -263,6 +268,7 @@
             this.txtCliente_Telefone.Name = "txtCliente_Telefone";
             this.txtCliente_Telefone.Size = new System.Drawing.Size(112, 20);
             this.txtCliente_Telefone.TabIndex = 3;
+            this.txtCliente_Telefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCliente_Telefone.TextChanged += new System.EventHandler(this.txtCliente_Telefone_TextChanged);
             // 
             // txtCliente_CNPJ
@@ -272,6 +278,7 @@
             this.txtCliente_CNPJ.Name = "txtCliente_CNPJ";
             this.txtCliente_CNPJ.Size = new System.Drawing.Size(112, 20);
             this.txtCliente_CNPJ.TabIndex = 1;
+            this.txtCliente_CNPJ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // btnConfirmarCliente
             // 

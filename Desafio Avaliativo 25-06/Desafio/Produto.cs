@@ -14,10 +14,10 @@ namespace Desafio
         string descricao;
         string unidade;
         string razaosocial;
-        int cnpj;
+        long cnpj;
         double custo;
 
-        public Produto(string codigo, string descricao, string unidade, string razaosocial, int cnpj, double custo)
+        public Produto(string codigo, string descricao, string unidade, string razaosocial, long cnpj, double custo)
         {
             this.codigo = codigo;
             this.descricao = descricao;
@@ -31,9 +31,10 @@ namespace Desafio
         public string Descricao { get => descricao; set => descricao = value; }
         public string Unidade { get => unidade; set => unidade = value; }
         public string Razaosocial { get => razaosocial; set => razaosocial = value; }
-        public int Cnpj { get => cnpj; set => cnpj = value; }
+        public long Cnpj { get => cnpj; set => cnpj = value; }
         public double Custo { get => custo; set => custo = value; }
 
+        /// Salva todos os dados daquele objeto Produto no banco de dados
         public void SalvarDados()
         {
             SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProjetosAcademiaConnectionString"].ConnectionString);
@@ -51,7 +52,7 @@ namespace Desafio
             cmd.Parameters.Add("@Descricao", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@Unidade", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@RazaoSocial", System.Data.SqlDbType.VarChar);
-            cmd.Parameters.Add("@CNPJ", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@CNPJ", System.Data.SqlDbType.BigInt);
             cmd.Parameters.Add("@Custo", System.Data.SqlDbType.Decimal);
             cmd.Parameters[0].Value = this.codigo;
             cmd.Parameters[1].Value = this.descricao;
