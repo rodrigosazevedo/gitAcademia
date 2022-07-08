@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="main.js"></script>
+    <title>Desafio - Cadastro de Aluno (com JavaScript)</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h2>Desafio - Cadastro de Aluno (com JavaScript)</h2>
+        </div>
+        <main>
+            <div class="container-fluid">
+                <form id="mainForm">
+                    
+                    <fieldset class="border px-2 mb-2">  
+                        <legend class="float-none w-auto">Informações Básicas</legend>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control form-control-lg" id="name" placeholder="Nome" pattern="^[A-Za-z]+$" required>
+                                    <label for="name" class="form-label">Nome<span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control form-control-lg" id="surname" placeholder="Sobrenome" pattern="^[A-Za-z]+$" required>
+                                    <label for="surname" class="form-label">Sobrenome<span class="text-danger">*</span></label>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="E-mail" required>
+                                    <label for="email" class="form-label">E-mail<span class="text-danger">*</span></label>
+                                </div>
+                            </div>         
+                            <div class="col-md-6 mb-3">            
+                                <h6 class="me-4">Gênero<span class="text-danger">*</span></h6>
+                                <div class="d-md-flex align-items-center">                                
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderRadio" id="female" value="Feminino" required/>
+                                        <label class="form-check-label" for="female">Feminino</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderRadio" id="male" value="Masculino"/>
+                                        <label class="form-check-label" for="male">Masculino</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderRadio" id="other" value="Outro"/>
+                                        <label class="form-check-label" for="other">Outro</label>
+                                </div>
+                            </div>
+                        </div> 
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">    
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="login" placeholder="Login" readonly>
+                                    <label for="login" class="form-label">Login</label>
+                                </div>     
+                            </div> 
+                            <div class="col-md-6 mb-3">  
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" id="password" placeholder="Senha">
+                                    <label for="password" class="form-label">Senha<span class="text-danger">*</span></label>
+                                </div> 
+                            </div>    
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="border px-2 mb-2"> 
+                        <legend class="float-none w-auto">Localização</legend>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select" id="state">
+                                        <option value="">Selecione...</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                    <label for="state" class="form-label">Estado</label>
+                                </div>
+                            </div> 
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="city" placeholder="Cidade">
+                                    <label for="city" class="form-label">Cidade</label>
+                                </div>
+                            </div>   
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="cep" placeholder="CEP">
+                                    <label for="cep" class="form-label">CEP</label>
+                                </div>
+                            </div>   
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="district" placeholder="Bairro">
+                                    <label for="district" class="form-label">Bairro</label>
+                                </div>
+                            </div>  
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="address" placeholder="Endereço">
+                                    <label for="address" class="form-label">Endereço</label>
+                                </div>
+                            </div>  
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="complement" placeholder="Complemento">
+                                    <label for="complement" class="form-label">Complemento</label>
+                                </div>
+                            </div>   
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="border px-2 mb-2"> 
+                        <legend class="float-none w-auto">Profissional</legend>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="github" placeholder="Perfil Github" required>
+                                    <label for="github" class="form-label">Perfil GitHub<span class="text-danger">*</span></label>
+                                </div>
+                            </div>  
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select" id="course" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="dot-net">.NET</option>
+                                        <option value="java">Java</option>
+                                    </select>
+                                    <label for="course" class="form-label">Academia<span class="text-danger">*</span></label>
+                                </div>
+                            </div>  
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select" id="professor" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="1">Alexandre Zamberlan</option>
+                                        <option value="2">Deivison Pasa</option>
+                                        <option value="3">Fabrício Tonetto</option>
+                                        <option value="4">Herysson Figueiredo</option>
+                                        <option value="5">Lucas Schlestein</option>
+                                        <option value="6">Ricardo Frohlich</option>
+                                    </select>
+                                    <label for="professor" class="form-label">Professor<span class="text-danger">*</span></label>
+                                </div>
+                            </div>   
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="border px-2 mb-2"> 
+                        <legend class="float-none w-auto">Termos de Uso</legend>
+                        <div class="row px-3">
+                            <textarea id="terms_text" class="formcontrol" rows="15" readonly>
+                                Este documento, e todo o conteúdo do site é oferecido por RODRIGO SOUZA DE AZEVEDO, neste termo representado apenas por “EMPRESA”, que regulamenta todos os direitos e obrigações com todos que acessam o site, denominado neste termo como “VISITANTE”, reguardado todos os direitos previstos na legislação, trazem as cláusulas abaixo como requisito para acesso e visita do mesmo, situado no endereço do projeto.
+
+                                A permanência no website implica-se automaticamente na leitura e aceitação tácita do presente termos de uso a seguir. Este termo foi atualizado pela última vez em 14 de setembro de 2021.
+
+                                1. DA FUNÇÃO DO SITE
+                                Este site foi criado e desenvolvido com a função de trazer conteúdo informativo de alta qualidade, a venda de produtos físicos, digitais e a divulgação de prestação de serviço. A EMPRESA busca através da criação de conteúdo de alta qualidade, desenvolvido por profissionais da área, trazer o conhecimento ao alcance de todos, assim como a divulgação dos próprios serviços.
+
+                                Nesta plataforma, poderá ser realizado tanto a divulgação de material original de alta qualidade, assim como a divulgação de produtos de e-commerce.
+
+                                Todo o conteúdo presente neste site foi desenvolvido buscando fontes e materiais de confiabilidade, assim como são baseados em estudos sérios e respeitados, através de pesquisa de alta nível.
+
+                                Todo o conteúdo é atualizado periodicamente, porém, pode conter em algum artigo, vídeo ou imagem, alguma informação que não reflita a verdade atual, não podendo a EMPRESA ser responsabilizada de nenhuma forma ou meio por qualquer conteúdo que não esteja devidamente atualizado.
+
+                                É de responsabilidade do usuário de usar todas as informações presentes no site com senso crítico, utilizando apenas como fonte de informação, e sempre buscando especialistas da área para a solução concreta do seu conflito.
+
+                                2. DO ACEITE DOS TERMOS
+                                Este documento, chamado “Termos de Uso”, aplicáveis a todos os visitantes do site, foi desenvolvido por Diego Castro Advogado – OAB/PI 15.613, modificado com permissão para este site.
+
+                                Este termo especifica e exige que todo usuário ao acessar o site da EMPRESA, leia e compreenda todas as cláusulas do mesmo, visto que ele estabelece entre a EMPRESA e o VISITANTE direitos e obrigações entre ambas as partes, aceitos expressamente pelo VISITANTE a permanecer navegando no site da EMPRESA.
+
+                                Ao continuar acessando o site, o VISITANTE expressa que aceita e entende todas as cláusulas, assim como concorda integralmente com cada uma delas, sendo este aceite imprescindível para a permanência na mesma. Caso o VISITANTE discorde de alguma cláusula ou termo deste contrato, o mesmo deve imediatamente interromper sua navegação de todas as formas e meios.
+
+                                Este termo pode e irá ser atualizado periodicamente pela EMPRESA, que se resguarda no direito de alteração, sem qualquer tipo de aviso prévio e comunicação. É importante que o VISITANTE confira sempre se houve movimentação e qual foi a última atualização do mesmo no começo da página.
+
+                                3. DO GLOSSÁRIO
+                                Este termo pode conter algumas palavras específicas que podem não se de conhecimento geral. Entre elas:
+
+                                VISITANTE: Todo e qualquer usuário do site, de qualquer forma e meio, que acesse através de computador, notebook, tablet, celular ou quaisquer outros meios, o website ou plataforma da empresa.
+                                NAVEGAÇÃO: O ato de visitar páginas e conteúdo do website ou plataforma da empresa.
+                                COOKIES: Pequenos arquivos de textos gerados automaticamente pelo site e transmitido para o navegador do visitante, que servem para melhorar a usabilidade do visitante.
+                                LOGIN: Dados de acesso do visitante ao realizar o cadastro junto a EMPRESA, dividido entre usuário e senha, que dá acesso a funções restritas do site.
+                                HIPERLINKS: São links clicáveis que podem aparecer pelo site ou no conteúdo, que levam para outra página da EMPRESA ou site externo.
+                                OFFLINE: Quando o site ou plataforma se encontra indisponível, não podendo ser acessado externamente por nenhum usuário.
+                                Em caso de dúvidas sobre qualquer palavra utilizada neste termo, o VISITANTE deverá entrar em contato com a EMPRESA através dos canais de comunicação encontradas no site.
+
+                                4. DO ACESSO AO SITE
+                                O Site e plataforma funcionam normalmente 24 (vinte e quatro) horas por dia, porém podem ocorrer pequenas interrupções de forma temporária para ajustes, manutenção, mudança de servidores, falhas técnicas ou por ordem de força maior, que podem deixar o site indisponível por tempo limitado.
+
+                                A EMPRESA não se responsabiliza por nenhuma perda de oportunidade ou prejuízos que esta indisponibilidade temporária possa gerar aos usuários.
+
+                                Em caso de manutenção que exigirem um tempo maior, a EMPRESA irá informar previamente aos clientes da necessidade e do tempo previsto em que o site ou plataforma ficará offline.
+
+                                O acesso ao site só é permitido a maiores de 18 anos de idade ou que possuírem capacidade civil plena. Para acesso de menores de idade, é necessária a expressa autorização dos pais ou tutores, ficando o mesmo responsáveis sobre qualquer compra ou acesso efetuados pelo mesmo.
+
+                                Caso seja necessário realizar um cadastro junto a plataforma, onde o VISITANTE deverá preencher um formulário com seus dados e informações, para ter acesso a alguma parte restrita, ou realizar alguma compra.
+
+                                Todos os dados estão protegidos conforme a Lei Geral de Proteção de Dados, e ao realizar o cadastro junto ao site, o VISITANTE concorda integralmente com a coleta de dados conforme a Lei e com a Política de Privacidade da EMPRESA.
+
+                                5. DA LICENÇA DE USO E CÓPIA
+                                O visitante poderá acessar todo o conteúdo do website, como artigos, vídeos, imagens, produtos e serviços, não significando nenhum tipo de cessão de direito ou permissão de uso, ou de cópia dos mesmo.
+
+                                Todos os direitos são preservados, conforme a legislação brasileira, principalmente na Lei de Direitos Autorais (regulamentada na Lei nº 9.610/18), assim como no Código Civil brasileiro (regulamentada na Lei nº 10.406/02), ou quaisquer outras legislações aplicáveis.
+
+                                Todo o conteúdo do site é protegido por direitos autorais, e seu uso, cópia, transmissão, venda, cessão ou revenda, deve seguir a lei brasileira, tendo a EMPRESA todos os seus direitos reservados, e não permitindo a cópia ou utilização de nenhuma forma e meio, sem autorização expressa e por escrita da mesma.
+
+                                A EMPRESA poderá em casos concretos permitir pontualmente exceções a este direito, que serão claramente destacados no mesmo, com a forma e permissão de uso do conteúdo protegido. Este direito é revogável e limitado as especificações de cada caso.
+
+                                6. DAS OBRIGAÇÕES
+                                O VISITANTE ao utilizar o website da EMPRESA, concorda integralmente em:
+
+                                De nenhuma forma ou meio realizar qualquer tipo de ação que tente invadir, hacker, destruir ou prejudicar a estrutura do site, plataforma da EMPRESA ou de seus parceiros comerciais. Incluindo-se, mas não se limitando, ao envio de vírus de computador, de ataques de DDOS, de acesso indevido por falhas da mesma ou quaisquer outras forma e meio.
+                                De não realizar divulgação indevida nos comentários do site de conteúdo de SPAM, empresas concorrentes, vírus, conteúdo que não possua direitos autorais ou quaisquer outros que não seja pertinente a discussão daquele texto, vídeo ou imagem.
+                                Da proibição em reproduzir qualquer conteúdo do site ou plataforma sem autorização expressa, podendo responder civil e criminalmente pelo mesmo.
+                                Com a Política de Privacidade do site, assim como tratamos os dados referentes ao cadastro e visita no site, podendo a qualquer momento e forma, requerer a exclusão dos mesmos, através do formulário de contato.
+                                7. DA MONETIZAÇÃO E PUBLICIDADE
+                                A EMPRESA pode alugar ou vender espaços publicitários na plataforma, ou no site, diretamente aos anunciantes, ou através de empresas especializadas com o Adsense (Google), Taboola ou outras plataformas especializadas como o Eletro Críticas.
+
+                                Essas publicidades não significam nenhuma forma de endosso ou responsabilidade pelos mesmos, ficando o VISITANTE responsável pelas compras, visitas, acessos ou quaisquer ações referentes as estas empresas.
+
+                                Todas as propagandas no site ou plataforma serão claramente destacadas como publicidade, como forma de disclaimer da EMPRESA e de conhecimento do VISITANTE.
+
+                                Em casos de compra de produtos ou serviços, será possível a devolução em até 07 (sete) dias, conforme o Código de Defesa do Consumidor.
+
+                                Estes anúncios podem ser selecionados pela empresa de publicidade automaticamente, conforme as visitas recentes do VISITANTE, assim como baseado no seu histórico de busca, conforme as políticas de acesso da plataforma.
+
+                                8. DOS TERMOS GERAIS
+                                O Site irá apresentar hiperlinks durante toda a sua navegação, que podem levar diretamente para outra página da EMPRESA ou para sites externos.
+
+                                Apesar da EMPRESA apenas criar links para sites externos de extrema confiança, caso o usuário acesse um site externo, a EMPRESA não tem nenhuma responsabilidade pelo meio, sendo uma mera indicação de complementação de conteúdo, ficando o mesmo responsável pelo acesso, assim como sobre quaisquer ações que venham a realizar neste site.
+
+                                Em caso que ocorra eventuais conflitos judiciais entre o VISITANTE e a EMPRESA, o foro elegido para a devida ação será o da comarca da Empresa, mesmo que haja outro mais privilegiado.
+
+                                Este Termo de uso é valido a partir de 08 de julho de 2022.
+                            </textarea>
+                            <div class="px-0">
+                                <input type="checkbox" class="form-check-input" id="terms" required disabled>
+                                <label class="form-check-label" for="terms">Eu li e concordo os termos descritos acima</label>                            
+                            </div>
+
+                            <div class="pt-3 px-0">
+                                <input name="information" id="info-yes" type="radio" class="form-check-input" value="info-yes" checked>
+                                <label class="form-check-label" for="info-yes">Quero receber informações e novidades pelo e-mail.</label>   
+                            </div>
+                            <div class="px-0 mb-3">
+                                <input name="information" id="info-no" type="radio" class="form-check-input" value="info-no">
+                                <label class="form-check-label" for="info-no">Não quero receber informações e novidades pelo e-mail.</label>   
+                            </div>
+                        </div>                        
+                    </fieldset> 
+                    <div class="text-center">
+                        <button class="w-25 btn btn-primary my-4" type="submit">Salvar</button> 
+                        <button class="w-25 btn btn-primary my-4" type="reset">Limpar</button>  
+                    </div>                                                                             
+                </form>                                
+            </div>
+        </main>
+        <div id="return-table" class="d-none">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Dados Cadastrados:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Nome</th>
+                        <td id="table-name"></td>
+                    </tr>
+                    <tr>
+                        <th>Sobrenome</th>
+                        <td id="table-surname"></td>                       
+                    </tr>
+                    <tr>
+                        <th>E-mail</th>
+                        <td id="table-email"></td>                       
+                    </tr>
+                    <tr>
+                        <th>Gênero</th>
+                        <td id="table-gender"></td>                       
+                    </tr>
+                    <tr>
+                        <th>Login</th>
+                        <td id="table-login"></td>                       
+                    </tr>       
+                    <tr>
+                        <th>Senha</th>
+                        <td id="table-password"></td>                       
+                    </tr>      
+                    <tr>
+                        <th>Estado</th>
+                        <td id="table-state"></td>                       
+                    </tr>       
+                    <tr>
+                        <th>Cidade</th>
+                        <td id="table-city"></td>                       
+                    </tr>  
+                    <tr>
+                        <th>CEP</th>
+                        <td id="table-cep"></td>                       
+                    </tr>
+                    <tr>
+                        <th>Bairro</th>
+                        <td id="table-district"></td>                       
+                    </tr> 
+                    <tr>
+                        <th>Endereço</th>
+                        <td id="table-address"></td>                       
+                    </tr> 
+                    <tr>
+                        <th>Complemento</th>
+                        <td id="table-complement"></td>                       
+                    </tr> 
+                    <tr>
+                        <th>Perfil Github</th>
+                        <td id="table-github"></td>                       
+                    </tr>
+                    <tr>
+                        <th>Academia</th>
+                        <td id="table-course"></td>                       
+                    </tr>  
+                    <tr>
+                        <th>Professor</th>
+                        <td id="table-professor"></td>                       
+                    </tr>  
+                    <tr>
+                        <th>Termo de Uso</th>
+                        <td id="table-terms"></td>                       
+                    </tr>
+                    <tr>
+                        <th>Informações por E-mail</th>
+                        <td id="table-info"></td>                       
+                    </tr>    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
