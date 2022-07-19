@@ -1,0 +1,180 @@
+﻿@using FinalProject.Models.Enums
+@model FinalProject.Models.Doctor
+
+
+@{
+    ViewData["Title"] = "Doutores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Doutores</h2>
+<h3>Criar</h3>
+
+<hr />
+<div class="row">
+        <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-6">            
+                <div class="form-floating">
+                    <select asp-for="SpecializationId" class="form-control mb-2" asp-items="ViewBag.SpecializationId"></select>
+                    <label asp-for="SpecializationId"></label>
+                    <span asp-validation-for="SpecializationId" class="text-danger"></span>
+                </div>
+                <div class="form-floating">
+                    <input asp-for="FirstName" class="form-control form-control-lg mb-2" aria-required="true" />
+                    <label asp-for="FirstName"></label>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-floating">
+                    <input asp-for="LastName" class="form-control form-control-lg mb-2" aria-required="true" />
+                    <label asp-for="LastName"></label>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-floating">
+                    <input asp-for="CPF" class="form-control form-control-lg mb-2" aria-required="true" />
+                    <label asp-for="CPF"></label>
+                    <span asp-validation-for="CPF" class="text-danger"></span>
+                </div>
+                <div class="form-floating">
+                    <input asp-for="Email" class="form-control form-control-lg mb-2" aria-required="true" />
+                    <label asp-for="Email"></label>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class = "form-group d-inline-flex w-100">
+                    <div class="form-floating col">
+                        <input asp-for="CRM_Number" class="form-control form-control-lg mb-2" />
+                        <label asp-for="CRM_Number"></label>
+                        <span asp-validation-for="CRM_Number" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto p-1"></div>
+                    <div class="form-floating col">
+                        <select class="form-select" asp-for="CRM_UF" asp-items="Html.GetEnumSelectList<BrazilianStates>()">
+                            <option selected="selected" value="">Selecione...</option>
+                        </select>
+                        <label asp-for="CRM_UF"></label>
+                        <span asp-validation-for="CRM_UF" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-floating">
+                    <input asp-for="Degree" class="form-control form-control-lg mb-2" />
+                    <label asp-for="Degree"></label>
+                    <span asp-validation-for="Degree" class="text-danger"></span>
+                </div>
+                <div class = "form-group d-inline-flex w-100">
+                    <div class="form-floating col">
+                        <input asp-for="PhoneNumber" class="form-control form-control-lg mb-2" aria-required="true" />
+                        <label asp-for="PhoneNumber"></label>
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto p-1"></div>
+                    <div class="form-floating col">
+                        <input type="date" asp-for="BirthDate" class="form-control form-control-lg mb-2" aria-required="true" />
+                        <label asp-for="BirthDate"></label>
+                        <span asp-validation-for="BirthDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class = "form-group d-inline-flex w-100">
+                    <div class="form-floating col">
+                        <select class="form-select" asp-for="BiologicalSex" asp-items="Html.GetEnumSelectList<BiologicalSex>()">
+                            <option selected="selected" value="">Selecione...</option>
+                        </select>
+                        <label asp-for="BiologicalSex"></label>
+                        <span asp-validation-for="BiologicalSex" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto p-1"></div>
+                    <div class="form-floating col">
+                        <select class="form-select" asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()">
+                            <option selected="selected" value="">Selecione...</option>
+                        </select>
+                        <label asp-for="Gender"></label>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6"> 
+                <div class = "form-group d-inline-flex w-100">
+                    <div class="form-floating col">
+                        <input asp-for="RG_Number" class="form-control form-control-lg mb-2" />
+                        <label asp-for="RG_Number"></label>
+                        <span asp-validation-for="RG_Number" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto p-1"></div>
+                    <div class="form-floating col">
+                        <input asp-for="RG_Agency" class="form-control form-control-lg mb-2" />
+                        <label asp-for="RG_Agency"></label>
+                        <span asp-validation-for="RG_Agency" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto p-1"></div>
+                    <div class="form-floating col">  
+                        <input type="date" asp-for="RG_ExpeditionDate" class="form-control form-control-lg mb-2" />
+                        <label asp-for="RG_ExpeditionDate"></label>
+                        <span asp-validation-for="RG_ExpeditionDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class = "form-group d-inline-flex w-100">
+                    <div class="form-floating col">
+                        <select class="form-select" asp-for="MaritalStatus" asp-items="Html.GetEnumSelectList<MaritalStatus>()">
+                            <option selected="selected" value="">Selecione...</option>
+                        </select>
+                        <label asp-for="MaritalStatus"></label>
+                        <span asp-validation-for="MaritalStatus" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto p-1"></div>
+                    <div class="form-floating col">  
+                        <input asp-for="CEP" class="form-control form-control-lg mb-2" />
+                        <label asp-for="CEP"></label>
+                        <span asp-validation-for="CEP" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class = "form-group d-inline-flex w-100">
+                    <div class="form-floating col">
+                        <select class="form-select" asp-for="State" asp-items="Html.GetEnumSelectList<BrazilianStates>()">
+                            <option selected="selected" value="">Selecione...</option>
+                        </select>
+                        <label asp-for="State"></label>
+                        <span asp-validation-for="State" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto p-1"></div>
+                    <div class="form-floating col">  
+                        <input asp-for="City" class="form-control form-control-lg mb-2" />
+                        <label asp-for="City"></label>
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto p-1"></div>
+                    <div class="form-floating col">
+                        <input asp-for="District" class="form-control form-control-lg mb-2" />
+                        <label asp-for="District"></label>
+                        <span asp-validation-for="District" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class = "form-group d-inline-flex w-100">
+                    <div class="form-floating col-9">
+                        <input asp-for="Address" class="form-control form-control-lg mb-2" />
+                        <label asp-for="Address"></label>
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="form-floating col-2">  
+                        <input asp-for="AddressNumber" class="form-control form-control-lg mb-2" />
+                        <label asp-for="AddressNumber"></label>
+                        <span asp-validation-for="AddressNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-floating">  
+                    <input asp-for="Complement" class="form-control form-control-lg mb-2" />
+                    <label asp-for="Complement"></label>
+                    <span asp-validation-for="Complement" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group mt-4">
+            <input type="submit" value="Criar" class="btn btn-primary" />
+            <a class = "btn btn-danger" asp-action="Index">Voltar</a>
+        </div>
+        </form>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

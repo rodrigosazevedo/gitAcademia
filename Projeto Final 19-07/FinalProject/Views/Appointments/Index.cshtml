@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FinalProject.Models.AppointmentSlot>
+
+@{
+    ViewData["Title"] = "Consultas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consultas <a class = "btn btn-success" asp-action="Create">Novo</a></h2>
+
+<table class="table table-striped text-center table-bordered">
+    <thead class="table-success">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Start)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Exam.ExamDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="align-middle">
+            <td>
+                @Html.DisplayFor(modelItem => item.Start)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doctor.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exam.ExamDescription)
+            </td>
+            <td>
+                <a class = "btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                <a class = "btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

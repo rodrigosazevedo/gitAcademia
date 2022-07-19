@@ -1,0 +1,42 @@
+﻿@model FinalProject.Models.Exam
+
+@{
+    ViewData["Title"] = "Exames";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Exames</h2>
+<h3>Editar</h3>
+
+<hr />
+<div class="row">
+    <div class="col-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-floating">
+                <select asp-for="SpecializationId" class="form-control mb-2" asp-items="ViewBag.SpecializationId"></select>
+                <label asp-for="SpecializationId"></label>
+                <span asp-validation-for="SpecializationId" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="ExamDescription" class="form-control form-control-lg mb-2" aria-required="true" />
+                <label asp-for="ExamDescription"></label>
+                <span asp-validation-for="ExamDescription" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Duration" class="form-control form-control-lg" aria-required="true" />
+                <label asp-for="Duration"></label>
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-4">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a class = "btn btn-danger" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

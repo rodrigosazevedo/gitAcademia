@@ -1,0 +1,56 @@
+﻿@model IEnumerable<FinalProject.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Doutores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Doutores <a class = "btn btn-success" asp-action="Create">Novo</a></h2>
+
+<table class="table table-striped text-center table-bordered">
+    <thead class="table-info">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CRM_Complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Degree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecializationId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="align-middle">
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CRM_Complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Degree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialization.Description)
+            </td>
+            <td>
+                <a class = "btn btn-warning" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> 
+                <a class = "btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
