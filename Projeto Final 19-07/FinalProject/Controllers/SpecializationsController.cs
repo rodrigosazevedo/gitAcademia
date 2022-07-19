@@ -19,7 +19,8 @@ namespace FinalProject.Controllers
             _context = context;
         }
 
-        // GET: Specializations
+        // GET: Specializations - Utilizado para pegar todas as Especializações do banco de dados e passá-las para uma lista, que será 
+        // exibida na página de Especializações
         public async Task<IActionResult> Index()
         {
               return _context.Specializations != null ? 
@@ -27,7 +28,8 @@ namespace FinalProject.Controllers
                           Problem("Entity set 'ApplicationDbContext.Specializations'  is null.");
         }
 
-        // GET: Specializations/Details/5
+        // GET: Specializations/Details - Utilizado para pegar o id da especialização selecionada na lista e adquirir os valores
+        // correspondentes no banco de dados, para exibí-los
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Specializations == null)
@@ -45,15 +47,14 @@ namespace FinalProject.Controllers
             return View(specialization);
         }
 
-        // GET: Specializations/Create
+        // GET: Specializations/Create - Utilizado apenas para exibir a view correspondente
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Specializations/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Specializations/Create - Método disparado pelo botão "Criar" na tela de criação de especializações. Pega os valores passados e 
+        // cria um novo modelo, que então será salvo no banco de dados. O BIND é utilizado como forma de segurança
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Description")] Specialization specialization)
@@ -67,7 +68,8 @@ namespace FinalProject.Controllers
             return View(specialization);
         }
 
-        // GET: Specializations/Edit/5
+        // GET: Specializations/Edit - Utilizado para pegar o ID da especialização selecionada e todos os valores do banco 
+        // de dados para exibir na tela de edição
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Specializations == null)
@@ -83,9 +85,8 @@ namespace FinalProject.Controllers
             return View(specialization);
         }
 
-        // POST: Specializations/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Specializations/Edit - Método disparado pelo botão "Salvar" na tela de edição de especializações. Pega os valores passados e 
+        // cria um novo modelo, que então é usado para atualizar o registro no banco de dados. O BIND é utilizado como forma de segurança
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Description")] Specialization specialization)
@@ -118,7 +119,7 @@ namespace FinalProject.Controllers
             return View(specialization);
         }
 
-        // GET: Specializations/Delete/5
+        // GET: Specializations/Delete - Utilizado para pegar o ID da especialização relacionada para exibir na tela.
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Specializations == null)
@@ -136,7 +137,8 @@ namespace FinalProject.Controllers
             return View(specialization);
         }
 
-        // POST: Specializations/Delete/5
+        // POST: Specializations/Delete - Disparado ao clicar no botão "Deletar". Utilizado para pegar o ID da especialização selecionada 
+        // para conseguir excluir o registro selecionado.
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -155,6 +157,7 @@ namespace FinalProject.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Checa se a especialização existe
         private bool SpecializationExists(int id)
         {
           return (_context.Specializations?.Any(e => e.Id == id)).GetValueOrDefault();

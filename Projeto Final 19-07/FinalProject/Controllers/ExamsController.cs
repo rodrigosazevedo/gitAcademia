@@ -19,14 +19,16 @@ namespace FinalProject.Controllers
             _context = context;
         }
 
-        // GET: Exams
+        // GET: Exams - Utilizado para pegar todos os Exames do banco de dados e passá-los para uma lista, que será 
+        // exibida na página de Consultas. Associa eles com as Especializações correspondentes.
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Exams.Include(e => e.Specialization);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Exams/Details/5
+        // GET: Exams/Details - Utilizado para pegar o id do exame selecionado na lista e adquirir os valores
+        // correspondentes no banco de dados, para exibí-los. Associa eles com as Especializações correspondentes.
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Exams == null)
@@ -45,16 +47,16 @@ namespace FinalProject.Controllers
             return View(exam);
         }
 
-        // GET: Exams/Create
+        // GET: Exams/Create - Utilizado para pegar todos os registros necessários para popular o select de Especializações
+        // na tela de criação de exames
         public IActionResult Create()
         {
             ViewData["SpecializationId"] = new SelectList(_context.Specializations, "Id", "Description");
             return View();
         }
 
-        // POST: Exams/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Exams/Create - Método disparado pelo botão "Criar" na tela de criação de exames. Pega os valores passados e 
+        // cria um novo modelo, que então será salvo no banco de dados. O BIND é utilizado como forma de segurança
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,SpecializationId,ExamDescription,Duration")] Exam exam)
@@ -69,7 +71,8 @@ namespace FinalProject.Controllers
             return View(exam);
         }
 
-        // GET: Exams/Edit/5
+        // GET: Exams/Edit - Utilizado para pegar o ID do exame selecionado e todos os registros necessários 
+        // para popular o select de especializações da página de edição de exames a partir do banco de dados. 
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Exams == null)
@@ -86,9 +89,8 @@ namespace FinalProject.Controllers
             return View(exam);
         }
 
-        // POST: Exams/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Exams/Edit - Método disparado pelo botão "Salvar" na tela de edição de exames. Pega os valores passados e 
+        // cria um novo modelo, que então é usado para atualizar o registro no banco de dados. O BIND é utilizado como forma de segurança
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,SpecializationId,ExamDescription,Duration")] Exam exam)
@@ -122,7 +124,8 @@ namespace FinalProject.Controllers
             return View(exam);
         }
 
-        // GET: Exams/Delete/5
+        // GET: Exams/Delete - Utilizado para pegar o ID do exame selecionado e os registros associados nas outras
+        // tabelas relacionadas para exibir na tela.
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Exams == null)
@@ -141,7 +144,8 @@ namespace FinalProject.Controllers
             return View(exam);
         }
 
-        // POST: Exams/Delete/5
+        // POST: Exams/Delete - Disparado ao clicar no botão "Deletar". Utilizado para pegar o ID do exame selecionado
+        // e os registros associados nas outras tabelas relacionadas para conseguir excluir o registro selecionado.
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -160,6 +164,7 @@ namespace FinalProject.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Checa se o exame existe
         private bool ExamExists(int id)
         {
           return (_context.Exams?.Any(e => e.Id == id)).GetValueOrDefault();
